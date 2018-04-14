@@ -63,6 +63,17 @@
             this.Altitude = new System.Windows.Forms.Label();
             this.LHeading = new System.Windows.Forms.Label();
             this.Heading = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Seq = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Results = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Message = new System.Windows.Forms.Label();
+            this.Request = new System.Windows.Forms.Button();
+            this.HeartBeat = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.FlightModes = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LCom
@@ -109,7 +120,7 @@
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(24, 142);
+            this.Start.Location = new System.Drawing.Point(260, 62);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(75, 23);
             this.Start.TabIndex = 3;
@@ -389,11 +400,121 @@
             this.Heading.TabIndex = 4;
             this.Heading.Text = "N/A";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(299, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Sequence:";
+            // 
+            // Seq
+            // 
+            this.Seq.AutoSize = true;
+            this.Seq.Location = new System.Drawing.Point(373, 202);
+            this.Seq.Name = "Seq";
+            this.Seq.Size = new System.Drawing.Size(30, 16);
+            this.Seq.TabIndex = 6;
+            this.Seq.Text = "N/A";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Lime;
+            this.label2.Location = new System.Drawing.Point(12, 321);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Command Results:";
+            // 
+            // Results
+            // 
+            this.Results.AutoSize = true;
+            this.Results.Location = new System.Drawing.Point(157, 321);
+            this.Results.Name = "Results";
+            this.Results.Size = new System.Drawing.Size(30, 16);
+            this.Results.TabIndex = 8;
+            this.Results.Text = "N/A";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Lime;
+            this.label3.Location = new System.Drawing.Point(12, 337);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Status Message:";
+            // 
+            // Message
+            // 
+            this.Message.AutoSize = true;
+            this.Message.Location = new System.Drawing.Point(157, 337);
+            this.Message.Name = "Message";
+            this.Message.Size = new System.Drawing.Size(30, 16);
+            this.Message.TabIndex = 10;
+            this.Message.Text = "N/A";
+            // 
+            // Request
+            // 
+            this.Request.Location = new System.Drawing.Point(343, 134);
+            this.Request.Name = "Request";
+            this.Request.Size = new System.Drawing.Size(75, 23);
+            this.Request.TabIndex = 11;
+            this.Request.Text = "Request";
+            this.Request.UseVisualStyleBackColor = true;
+            this.Request.Click += new System.EventHandler(this.DoCmd);
+            // 
+            // HeartBeat
+            // 
+            this.HeartBeat.DoWork += new System.ComponentModel.DoWorkEventHandler(this.HeartB);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(302, 279);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Stop Heartbeat";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.StopHeartBeat);
+            // 
+            // FlightModes
+            // 
+            this.FlightModes.FormattingEnabled = true;
+            this.FlightModes.Location = new System.Drawing.Point(112, 131);
+            this.FlightModes.Name = "FlightModes";
+            this.FlightModes.Size = new System.Drawing.Size(121, 24);
+            this.FlightModes.TabIndex = 13;
+            this.FlightModes.SelectedIndexChanged += new System.EventHandler(this.ChgFlight);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Location = new System.Drawing.Point(26, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Flight Mode:";
+            // 
             // MavLinkReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 436);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.FlightModes);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Request);
+            this.Controls.Add(this.Message);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Results);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Seq);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Longitude);
             this.Controls.Add(this.Yaw);
             this.Controls.Add(this.Current);
@@ -474,6 +595,17 @@
         private System.Windows.Forms.Label Altitude;
         private System.Windows.Forms.Label LHeading;
         private System.Windows.Forms.Label Heading;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Seq;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Results;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Message;
+        private System.Windows.Forms.Button Request;
+        private System.ComponentModel.BackgroundWorker HeartBeat;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox FlightModes;
+        private System.Windows.Forms.Label label4;
     }
 }
 

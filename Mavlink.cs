@@ -197,9 +197,6 @@ namespace MavLink
                    var debugArray = new byte[payLoadLength + 7];
                    Array.Copy(bytesToProcess, (int)(i - 3), debugArray, 0, debugArray.Length);
 
-                   if (debugArray[5] == 193)
-                       j = 0;
-
                    //OnPacketDecoded(packet, rxPacketSequence, debugArray);
 
                    ProcessPacketBytes(packet, rxPacketSequence);

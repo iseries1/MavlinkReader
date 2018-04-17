@@ -255,7 +255,7 @@ namespace MavLinkReader
             Msg_set_mode m = new Msg_set_mode();
             m.base_mode = (byte)MAV_MODE_FLAG.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED;
             m.custom_mode = (byte)i;
-            m.target_system = (byte)MAV_AUTOPILOT.MAV_AUTOPILOT_PIXHAWK;
+            m.target_system = (byte)MAV_AUTOPILOT.MAV_AUTOPILOT_RESERVED;
 
             SendPacket(m);
         }

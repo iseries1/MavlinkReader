@@ -102,7 +102,6 @@
             this.Comm.Name = "Comm";
             this.Comm.Size = new System.Drawing.Size(100, 22);
             this.Comm.TabIndex = 1;
-            this.Comm.Text = "COM16";
             // 
             // Baud
             // 

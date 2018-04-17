@@ -49,58 +49,6 @@ namespace MavLink
     
         public static Dictionary<int, MavPacketInfo> Lookup = new Dictionary<int, MavPacketInfo>
         {
-			{150, new MavPacketInfo(Deserialize_SENSOR_OFFSETS, 134)},
-			{151, new MavPacketInfo(Deserialize_SET_MAG_OFFSETS, 219)},
-			{152, new MavPacketInfo(Deserialize_MEMINFO, 208)},
-			{153, new MavPacketInfo(Deserialize_AP_ADC, 188)},
-			{154, new MavPacketInfo(Deserialize_DIGICAM_CONFIGURE, 84)},
-			{155, new MavPacketInfo(Deserialize_DIGICAM_CONTROL, 22)},
-			{156, new MavPacketInfo(Deserialize_MOUNT_CONFIGURE, 19)},
-			{157, new MavPacketInfo(Deserialize_MOUNT_CONTROL, 21)},
-			{158, new MavPacketInfo(Deserialize_MOUNT_STATUS, 134)},
-			{160, new MavPacketInfo(Deserialize_FENCE_POINT, 78)},
-			{161, new MavPacketInfo(Deserialize_FENCE_FETCH_POINT, 68)},
-			{162, new MavPacketInfo(Deserialize_FENCE_STATUS, 189)},
-			{163, new MavPacketInfo(Deserialize_AHRS, 127)},
-			{164, new MavPacketInfo(Deserialize_SIMSTATE, 154)},
-			{165, new MavPacketInfo(Deserialize_HWSTATUS, 21)},
-			{166, new MavPacketInfo(Deserialize_RADIO, 21)},
-			{167, new MavPacketInfo(Deserialize_LIMITS_STATUS, 144)},
-			{168, new MavPacketInfo(Deserialize_WIND, 1)},
-			{169, new MavPacketInfo(Deserialize_DATA16, 234)},
-			{170, new MavPacketInfo(Deserialize_DATA32, 73)},
-			{171, new MavPacketInfo(Deserialize_DATA64, 181)},
-			{172, new MavPacketInfo(Deserialize_DATA96, 22)},
-			{173, new MavPacketInfo(Deserialize_RANGEFINDER, 83)},
-			{174, new MavPacketInfo(Deserialize_AIRSPEED_AUTOCAL, 167)},
-			{175, new MavPacketInfo(Deserialize_RALLY_POINT, 138)},
-			{176, new MavPacketInfo(Deserialize_RALLY_FETCH_POINT, 234)},
-			{177, new MavPacketInfo(Deserialize_COMPASSMOT_STATUS, 240)},
-			{178, new MavPacketInfo(Deserialize_AHRS2, 47)},
-			{179, new MavPacketInfo(Deserialize_CAMERA_STATUS, 189)},
-			{180, new MavPacketInfo(Deserialize_CAMERA_FEEDBACK, 52)},
-			{181, new MavPacketInfo(Deserialize_BATTERY2, 174)},
-			{182, new MavPacketInfo(Deserialize_AHRS3, 229)},
-			{183, new MavPacketInfo(Deserialize_AUTOPILOT_VERSION_REQUEST, 85)},
-			{186, new MavPacketInfo(Deserialize_LED_CONTROL, 72)},
-			{191, new MavPacketInfo(Deserialize_MAG_CAL_PROGRESS, 92)},
-			{192, new MavPacketInfo(Deserialize_MAG_CAL_REPORT, 36)},
-			{193, new MavPacketInfo(Deserialize_EKF_STATUS_REPORT, 71)},
-			{200, new MavPacketInfo(Deserialize_GIMBAL_REPORT, 134)},
-			{201, new MavPacketInfo(Deserialize_GIMBAL_CONTROL, 205)},
-			{202, new MavPacketInfo(Deserialize_GIMBAL_RESET, 94)},
-			{203, new MavPacketInfo(Deserialize_GIMBAL_AXIS_CALIBRATION_PROGRESS, 128)},
-			{204, new MavPacketInfo(Deserialize_GIMBAL_SET_HOME_OFFSETS, 54)},
-			{205, new MavPacketInfo(Deserialize_GIMBAL_HOME_OFFSET_CALIBRATION_RESULT, 63)},
-			{206, new MavPacketInfo(Deserialize_GIMBAL_SET_FACTORY_PARAMETERS, 112)},
-			{207, new MavPacketInfo(Deserialize_GIMBAL_FACTORY_PARAMETERS_LOADED, 201)},
-			{208, new MavPacketInfo(Deserialize_GIMBAL_ERASE_FIRMWARE_AND_CONFIG, 221)},
-			{209, new MavPacketInfo(Deserialize_GIMBAL_PERFORM_FACTORY_TESTS, 226)},
-			{210, new MavPacketInfo(Deserialize_GIMBAL_REPORT_FACTORY_TESTS_PROGRESS, 238)},
-			{215, new MavPacketInfo(Deserialize_GOPRO_POWER_ON, 241)},
-			{216, new MavPacketInfo(Deserialize_GOPRO_POWER_OFF, 155)},
-			{217, new MavPacketInfo(Deserialize_GOPRO_COMMAND, 43)},
-			{218, new MavPacketInfo(Deserialize_GOPRO_RESPONSE, 149)},
 			{0, new MavPacketInfo(Deserialize_HEARTBEAT, 50)},
 			{1, new MavPacketInfo(Deserialize_SYS_STATUS, 124)},
 			{2, new MavPacketInfo(Deserialize_SYSTEM_TIME, 137)},
@@ -140,12 +88,13 @@ namespace MavLink
 			{48, new MavPacketInfo(Deserialize_SET_GPS_GLOBAL_ORIGIN, 41)},
 			{49, new MavPacketInfo(Deserialize_GPS_GLOBAL_ORIGIN, 39)},
 			{50, new MavPacketInfo(Deserialize_PARAM_MAP_RC, 78)},
+			{51, new MavPacketInfo(Deserialize_MISSION_REQUEST_INT, 196)},
 			{54, new MavPacketInfo(Deserialize_SAFETY_SET_ALLOWED_AREA, 15)},
 			{55, new MavPacketInfo(Deserialize_SAFETY_ALLOWED_AREA, 3)},
-			{61, new MavPacketInfo(Deserialize_ATTITUDE_QUATERNION_COV, 153)},
+			{61, new MavPacketInfo(Deserialize_ATTITUDE_QUATERNION_COV, 167)},
 			{62, new MavPacketInfo(Deserialize_NAV_CONTROLLER_OUTPUT, 183)},
-			{63, new MavPacketInfo(Deserialize_GLOBAL_POSITION_INT_COV, 51)},
-			{64, new MavPacketInfo(Deserialize_LOCAL_POSITION_NED_COV, 59)},
+			{63, new MavPacketInfo(Deserialize_GLOBAL_POSITION_INT_COV, 119)},
+			{64, new MavPacketInfo(Deserialize_LOCAL_POSITION_NED_COV, 191)},
 			{65, new MavPacketInfo(Deserialize_RC_CHANNELS, 118)},
 			{66, new MavPacketInfo(Deserialize_REQUEST_DATA_STREAM, 148)},
 			{67, new MavPacketInfo(Deserialize_DATA_STREAM, 21)},
@@ -167,6 +116,7 @@ namespace MavLink
 			{90, new MavPacketInfo(Deserialize_HIL_STATE, 183)},
 			{91, new MavPacketInfo(Deserialize_HIL_CONTROLS, 63)},
 			{92, new MavPacketInfo(Deserialize_HIL_RC_INPUTS_RAW, 54)},
+			{93, new MavPacketInfo(Deserialize_HIL_ACTUATOR_CONTROLS, 47)},
 			{100, new MavPacketInfo(Deserialize_OPTICAL_FLOW, 175)},
 			{101, new MavPacketInfo(Deserialize_GLOBAL_VISION_POSITION_ESTIMATE, 102)},
 			{102, new MavPacketInfo(Deserialize_VISION_POSITION_ESTIMATE, 158)},
@@ -208,8 +158,27 @@ namespace MavLink
 			{138, new MavPacketInfo(Deserialize_ATT_POS_MOCAP, 109)},
 			{139, new MavPacketInfo(Deserialize_SET_ACTUATOR_CONTROL_TARGET, 168)},
 			{140, new MavPacketInfo(Deserialize_ACTUATOR_CONTROL_TARGET, 181)},
+			{141, new MavPacketInfo(Deserialize_ALTITUDE, 47)},
+			{142, new MavPacketInfo(Deserialize_RESOURCE_REQUEST, 72)},
+			{143, new MavPacketInfo(Deserialize_SCALED_PRESSURE3, 131)},
+			{144, new MavPacketInfo(Deserialize_FOLLOW_TARGET, 127)},
+			{146, new MavPacketInfo(Deserialize_CONTROL_SYSTEM_STATE, 103)},
 			{147, new MavPacketInfo(Deserialize_BATTERY_STATUS, 154)},
 			{148, new MavPacketInfo(Deserialize_AUTOPILOT_VERSION, 178)},
+			{149, new MavPacketInfo(Deserialize_LANDING_TARGET, 200)},
+			{230, new MavPacketInfo(Deserialize_ESTIMATOR_STATUS, 163)},
+			{231, new MavPacketInfo(Deserialize_WIND_COV, 105)},
+			{232, new MavPacketInfo(Deserialize_GPS_INPUT, 151)},
+			{233, new MavPacketInfo(Deserialize_GPS_RTCM_DATA, 35)},
+			{234, new MavPacketInfo(Deserialize_HIGH_LATENCY, 150)},
+			{235, new MavPacketInfo(Deserialize_HIGH_LATENCY2, 179)},
+			{241, new MavPacketInfo(Deserialize_VIBRATION, 90)},
+			{242, new MavPacketInfo(Deserialize_HOME_POSITION, 104)},
+			{243, new MavPacketInfo(Deserialize_SET_HOME_POSITION, 85)},
+			{244, new MavPacketInfo(Deserialize_MESSAGE_INTERVAL, 95)},
+			{245, new MavPacketInfo(Deserialize_EXTENDED_SYS_STATE, 130)},
+			{246, new MavPacketInfo(Deserialize_ADSB_VEHICLE, 184)},
+			{247, new MavPacketInfo(Deserialize_COLLISION, 81)},
 			{248, new MavPacketInfo(Deserialize_V2_EXTENSION, 8)},
 			{249, new MavPacketInfo(Deserialize_MEMORY_VECT, 204)},
 			{250, new MavPacketInfo(Deserialize_DEBUG_VECT, 49)},
@@ -218,670 +187,6 @@ namespace MavLink
 			{253, new MavPacketInfo(Deserialize_STATUSTEXT, 83)},
 			{254, new MavPacketInfo(Deserialize_DEBUG, 46)},
 		};
-
-		internal static MavlinkMessage Deserialize_SENSOR_OFFSETS(byte[] bytes, int offset)
-		{
-			return new Msg_sensor_offsets
-			{
-				mag_declination = bitconverter.ToSingle(bytes, offset + 0),
-				raw_press = bitconverter.ToInt32(bytes, offset + 4),
-				raw_temp = bitconverter.ToInt32(bytes, offset + 8),
-				gyro_cal_x = bitconverter.ToSingle(bytes, offset + 12),
-				gyro_cal_y = bitconverter.ToSingle(bytes, offset + 16),
-				gyro_cal_z = bitconverter.ToSingle(bytes, offset + 20),
-				accel_cal_x = bitconverter.ToSingle(bytes, offset + 24),
-				accel_cal_y = bitconverter.ToSingle(bytes, offset + 28),
-				accel_cal_z = bitconverter.ToSingle(bytes, offset + 32),
-				mag_ofs_x = bitconverter.ToInt16(bytes, offset + 36),
-				mag_ofs_y = bitconverter.ToInt16(bytes, offset + 38),
-				mag_ofs_z = bitconverter.ToInt16(bytes, offset + 40),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_SET_MAG_OFFSETS(byte[] bytes, int offset)
-		{
-			return new Msg_set_mag_offsets
-			{
-				mag_ofs_x = bitconverter.ToInt16(bytes, offset + 0),
-				mag_ofs_y = bitconverter.ToInt16(bytes, offset + 2),
-				mag_ofs_z = bitconverter.ToInt16(bytes, offset + 4),
-				target_system = bytes[offset + 6],
-				target_component = bytes[offset + 7],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_MEMINFO(byte[] bytes, int offset)
-		{
-			return new Msg_meminfo
-			{
-				brkval = bitconverter.ToUInt16(bytes, offset + 0),
-				freemem = bitconverter.ToUInt16(bytes, offset + 2),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_AP_ADC(byte[] bytes, int offset)
-		{
-			return new Msg_ap_adc
-			{
-				adc1 = bitconverter.ToUInt16(bytes, offset + 0),
-				adc2 = bitconverter.ToUInt16(bytes, offset + 2),
-				adc3 = bitconverter.ToUInt16(bytes, offset + 4),
-				adc4 = bitconverter.ToUInt16(bytes, offset + 6),
-				adc5 = bitconverter.ToUInt16(bytes, offset + 8),
-				adc6 = bitconverter.ToUInt16(bytes, offset + 10),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_DIGICAM_CONFIGURE(byte[] bytes, int offset)
-		{
-			return new Msg_digicam_configure
-			{
-				extra_value = bitconverter.ToSingle(bytes, offset + 0),
-				shutter_speed = bitconverter.ToUInt16(bytes, offset + 4),
-				target_system = bytes[offset + 6],
-				target_component = bytes[offset + 7],
-				mode = bytes[offset + 8],
-				aperture = bytes[offset + 9],
-				iso = bytes[offset + 10],
-				exposure_type = bytes[offset + 11],
-				command_id = bytes[offset + 12],
-				engine_cut_off = bytes[offset + 13],
-				extra_param = bytes[offset + 14],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_DIGICAM_CONTROL(byte[] bytes, int offset)
-		{
-			return new Msg_digicam_control
-			{
-				extra_value = bitconverter.ToSingle(bytes, offset + 0),
-				target_system = bytes[offset + 4],
-				target_component = bytes[offset + 5],
-				session = bytes[offset + 6],
-				zoom_pos = bytes[offset + 7],
-				zoom_step = bitconverter.ToInt8(bytes, offset + 8),
-				focus_lock = bytes[offset + 9],
-				shot = bytes[offset + 10],
-				command_id = bytes[offset + 11],
-				extra_param = bytes[offset + 12],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_MOUNT_CONFIGURE(byte[] bytes, int offset)
-		{
-			return new Msg_mount_configure
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-				mount_mode = bytes[offset + 2],
-				stab_roll = bytes[offset + 3],
-				stab_pitch = bytes[offset + 4],
-				stab_yaw = bytes[offset + 5],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_MOUNT_CONTROL(byte[] bytes, int offset)
-		{
-			return new Msg_mount_control
-			{
-				input_a = bitconverter.ToInt32(bytes, offset + 0),
-				input_b = bitconverter.ToInt32(bytes, offset + 4),
-				input_c = bitconverter.ToInt32(bytes, offset + 8),
-				target_system = bytes[offset + 12],
-				target_component = bytes[offset + 13],
-				save_position = bytes[offset + 14],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_MOUNT_STATUS(byte[] bytes, int offset)
-		{
-			return new Msg_mount_status
-			{
-				pointing_a = bitconverter.ToInt32(bytes, offset + 0),
-				pointing_b = bitconverter.ToInt32(bytes, offset + 4),
-				pointing_c = bitconverter.ToInt32(bytes, offset + 8),
-				target_system = bytes[offset + 12],
-				target_component = bytes[offset + 13],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_FENCE_POINT(byte[] bytes, int offset)
-		{
-			return new Msg_fence_point
-			{
-				lat = bitconverter.ToSingle(bytes, offset + 0),
-				lng = bitconverter.ToSingle(bytes, offset + 4),
-				target_system = bytes[offset + 8],
-				target_component = bytes[offset + 9],
-				idx = bytes[offset + 10],
-				count = bytes[offset + 11],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_FENCE_FETCH_POINT(byte[] bytes, int offset)
-		{
-			return new Msg_fence_fetch_point
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-				idx = bytes[offset + 2],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_FENCE_STATUS(byte[] bytes, int offset)
-		{
-			return new Msg_fence_status
-			{
-				breach_time = bitconverter.ToUInt32(bytes, offset + 0),
-				breach_count = bitconverter.ToUInt16(bytes, offset + 4),
-				breach_status = bytes[offset + 6],
-				breach_type = bytes[offset + 7],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_AHRS(byte[] bytes, int offset)
-		{
-			return new Msg_ahrs
-			{
-				omegaIx = bitconverter.ToSingle(bytes, offset + 0),
-				omegaIy = bitconverter.ToSingle(bytes, offset + 4),
-				omegaIz = bitconverter.ToSingle(bytes, offset + 8),
-				accel_weight = bitconverter.ToSingle(bytes, offset + 12),
-				renorm_val = bitconverter.ToSingle(bytes, offset + 16),
-				error_rp = bitconverter.ToSingle(bytes, offset + 20),
-				error_yaw = bitconverter.ToSingle(bytes, offset + 24),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_SIMSTATE(byte[] bytes, int offset)
-		{
-			return new Msg_simstate
-			{
-				roll = bitconverter.ToSingle(bytes, offset + 0),
-				pitch = bitconverter.ToSingle(bytes, offset + 4),
-				yaw = bitconverter.ToSingle(bytes, offset + 8),
-				xacc = bitconverter.ToSingle(bytes, offset + 12),
-				yacc = bitconverter.ToSingle(bytes, offset + 16),
-				zacc = bitconverter.ToSingle(bytes, offset + 20),
-				xgyro = bitconverter.ToSingle(bytes, offset + 24),
-				ygyro = bitconverter.ToSingle(bytes, offset + 28),
-				zgyro = bitconverter.ToSingle(bytes, offset + 32),
-				lat = bitconverter.ToInt32(bytes, offset + 36),
-				lng = bitconverter.ToInt32(bytes, offset + 40),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_HWSTATUS(byte[] bytes, int offset)
-		{
-			return new Msg_hwstatus
-			{
-				Vcc = bitconverter.ToUInt16(bytes, offset + 0),
-				I2Cerr = bytes[offset + 2],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_RADIO(byte[] bytes, int offset)
-		{
-			return new Msg_radio
-			{
-				rxerrors = bitconverter.ToUInt16(bytes, offset + 0),
-				@fixed = bitconverter.ToUInt16(bytes, offset + 2),
-				rssi = bytes[offset + 4],
-				remrssi = bytes[offset + 5],
-				txbuf = bytes[offset + 6],
-				noise = bytes[offset + 7],
-				remnoise = bytes[offset + 8],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_LIMITS_STATUS(byte[] bytes, int offset)
-		{
-			return new Msg_limits_status
-			{
-				last_trigger = bitconverter.ToUInt32(bytes, offset + 0),
-				last_action = bitconverter.ToUInt32(bytes, offset + 4),
-				last_recovery = bitconverter.ToUInt32(bytes, offset + 8),
-				last_clear = bitconverter.ToUInt32(bytes, offset + 12),
-				breach_count = bitconverter.ToUInt16(bytes, offset + 16),
-				limits_state = bytes[offset + 18],
-				mods_enabled = bytes[offset + 19],
-				mods_required = bytes[offset + 20],
-				mods_triggered = bytes[offset + 21],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_WIND(byte[] bytes, int offset)
-		{
-			return new Msg_wind
-			{
-				direction = bitconverter.ToSingle(bytes, offset + 0),
-				speed = bitconverter.ToSingle(bytes, offset + 4),
-				speed_z = bitconverter.ToSingle(bytes, offset + 8),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_DATA16(byte[] bytes, int offset)
-		{
-			return new Msg_data16
-			{
-				type = bytes[offset + 0],
-				len = bytes[offset + 1],
-				data =  ByteArrayUtil.ToUInt8(bytes, offset + 2, 16),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_DATA32(byte[] bytes, int offset)
-		{
-			return new Msg_data32
-			{
-				type = bytes[offset + 0],
-				len = bytes[offset + 1],
-				data =  ByteArrayUtil.ToUInt8(bytes, offset + 2, 32),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_DATA64(byte[] bytes, int offset)
-		{
-			return new Msg_data64
-			{
-				type = bytes[offset + 0],
-				len = bytes[offset + 1],
-				data =  ByteArrayUtil.ToUInt8(bytes, offset + 2, 64),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_DATA96(byte[] bytes, int offset)
-		{
-			return new Msg_data96
-			{
-				type = bytes[offset + 0],
-				len = bytes[offset + 1],
-				data =  ByteArrayUtil.ToUInt8(bytes, offset + 2, 96),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_RANGEFINDER(byte[] bytes, int offset)
-		{
-			return new Msg_rangefinder
-			{
-				distance = bitconverter.ToSingle(bytes, offset + 0),
-				voltage = bitconverter.ToSingle(bytes, offset + 4),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_AIRSPEED_AUTOCAL(byte[] bytes, int offset)
-		{
-			return new Msg_airspeed_autocal
-			{
-				vx = bitconverter.ToSingle(bytes, offset + 0),
-				vy = bitconverter.ToSingle(bytes, offset + 4),
-				vz = bitconverter.ToSingle(bytes, offset + 8),
-				diff_pressure = bitconverter.ToSingle(bytes, offset + 12),
-				EAS2TAS = bitconverter.ToSingle(bytes, offset + 16),
-				ratio = bitconverter.ToSingle(bytes, offset + 20),
-				state_x = bitconverter.ToSingle(bytes, offset + 24),
-				state_y = bitconverter.ToSingle(bytes, offset + 28),
-				state_z = bitconverter.ToSingle(bytes, offset + 32),
-				Pax = bitconverter.ToSingle(bytes, offset + 36),
-				Pby = bitconverter.ToSingle(bytes, offset + 40),
-				Pcz = bitconverter.ToSingle(bytes, offset + 44),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_RALLY_POINT(byte[] bytes, int offset)
-		{
-			return new Msg_rally_point
-			{
-				lat = bitconverter.ToInt32(bytes, offset + 0),
-				lng = bitconverter.ToInt32(bytes, offset + 4),
-				alt = bitconverter.ToInt16(bytes, offset + 8),
-				break_alt = bitconverter.ToInt16(bytes, offset + 10),
-				land_dir = bitconverter.ToUInt16(bytes, offset + 12),
-				target_system = bytes[offset + 14],
-				target_component = bytes[offset + 15],
-				idx = bytes[offset + 16],
-				count = bytes[offset + 17],
-				flags = bytes[offset + 18],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_RALLY_FETCH_POINT(byte[] bytes, int offset)
-		{
-			return new Msg_rally_fetch_point
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-				idx = bytes[offset + 2],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_COMPASSMOT_STATUS(byte[] bytes, int offset)
-		{
-			return new Msg_compassmot_status
-			{
-				current = bitconverter.ToSingle(bytes, offset + 0),
-				CompensationX = bitconverter.ToSingle(bytes, offset + 4),
-				CompensationY = bitconverter.ToSingle(bytes, offset + 8),
-				CompensationZ = bitconverter.ToSingle(bytes, offset + 12),
-				throttle = bitconverter.ToUInt16(bytes, offset + 16),
-				interference = bitconverter.ToUInt16(bytes, offset + 18),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_AHRS2(byte[] bytes, int offset)
-		{
-			return new Msg_ahrs2
-			{
-				roll = bitconverter.ToSingle(bytes, offset + 0),
-				pitch = bitconverter.ToSingle(bytes, offset + 4),
-				yaw = bitconverter.ToSingle(bytes, offset + 8),
-				altitude = bitconverter.ToSingle(bytes, offset + 12),
-				lat = bitconverter.ToInt32(bytes, offset + 16),
-				lng = bitconverter.ToInt32(bytes, offset + 20),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_CAMERA_STATUS(byte[] bytes, int offset)
-		{
-			return new Msg_camera_status
-			{
-				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
-				p1 = bitconverter.ToSingle(bytes, offset + 8),
-				p2 = bitconverter.ToSingle(bytes, offset + 12),
-				p3 = bitconverter.ToSingle(bytes, offset + 16),
-				p4 = bitconverter.ToSingle(bytes, offset + 20),
-				img_idx = bitconverter.ToUInt16(bytes, offset + 24),
-				target_system = bytes[offset + 26],
-				cam_idx = bytes[offset + 27],
-				event_id = bytes[offset + 28],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_CAMERA_FEEDBACK(byte[] bytes, int offset)
-		{
-			return new Msg_camera_feedback
-			{
-				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
-				lat = bitconverter.ToInt32(bytes, offset + 8),
-				lng = bitconverter.ToInt32(bytes, offset + 12),
-				alt_msl = bitconverter.ToSingle(bytes, offset + 16),
-				alt_rel = bitconverter.ToSingle(bytes, offset + 20),
-				roll = bitconverter.ToSingle(bytes, offset + 24),
-				pitch = bitconverter.ToSingle(bytes, offset + 28),
-				yaw = bitconverter.ToSingle(bytes, offset + 32),
-				foc_len = bitconverter.ToSingle(bytes, offset + 36),
-				img_idx = bitconverter.ToUInt16(bytes, offset + 40),
-				target_system = bytes[offset + 42],
-				cam_idx = bytes[offset + 43],
-				flags = bytes[offset + 44],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_BATTERY2(byte[] bytes, int offset)
-		{
-			return new Msg_battery2
-			{
-				voltage = bitconverter.ToUInt16(bytes, offset + 0),
-				current_battery = bitconverter.ToInt16(bytes, offset + 2),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_AHRS3(byte[] bytes, int offset)
-		{
-			return new Msg_ahrs3
-			{
-				roll = bitconverter.ToSingle(bytes, offset + 0),
-				pitch = bitconverter.ToSingle(bytes, offset + 4),
-				yaw = bitconverter.ToSingle(bytes, offset + 8),
-				altitude = bitconverter.ToSingle(bytes, offset + 12),
-				lat = bitconverter.ToInt32(bytes, offset + 16),
-				lng = bitconverter.ToInt32(bytes, offset + 20),
-				v1 = bitconverter.ToSingle(bytes, offset + 24),
-				v2 = bitconverter.ToSingle(bytes, offset + 28),
-				v3 = bitconverter.ToSingle(bytes, offset + 32),
-				v4 = bitconverter.ToSingle(bytes, offset + 36),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_AUTOPILOT_VERSION_REQUEST(byte[] bytes, int offset)
-		{
-			return new Msg_autopilot_version_request
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_LED_CONTROL(byte[] bytes, int offset)
-		{
-			return new Msg_led_control
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-				instance = bytes[offset + 2],
-				pattern = bytes[offset + 3],
-				custom_len = bytes[offset + 4],
-				custom_bytes =  ByteArrayUtil.ToUInt8(bytes, offset + 5, 24),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_MAG_CAL_PROGRESS(byte[] bytes, int offset)
-		{
-			return new Msg_mag_cal_progress
-			{
-				direction_x = bitconverter.ToSingle(bytes, offset + 0),
-				direction_y = bitconverter.ToSingle(bytes, offset + 4),
-				direction_z = bitconverter.ToSingle(bytes, offset + 8),
-				compass_id = bytes[offset + 12],
-				cal_mask = bytes[offset + 13],
-				cal_status = bytes[offset + 14],
-				attempt = bytes[offset + 15],
-				completion_pct = bytes[offset + 16],
-				completion_mask =  ByteArrayUtil.ToUInt8(bytes, offset + 17, 10),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_MAG_CAL_REPORT(byte[] bytes, int offset)
-		{
-			return new Msg_mag_cal_report
-			{
-				fitness = bitconverter.ToSingle(bytes, offset + 0),
-				ofs_x = bitconverter.ToSingle(bytes, offset + 4),
-				ofs_y = bitconverter.ToSingle(bytes, offset + 8),
-				ofs_z = bitconverter.ToSingle(bytes, offset + 12),
-				diag_x = bitconverter.ToSingle(bytes, offset + 16),
-				diag_y = bitconverter.ToSingle(bytes, offset + 20),
-				diag_z = bitconverter.ToSingle(bytes, offset + 24),
-				offdiag_x = bitconverter.ToSingle(bytes, offset + 28),
-				offdiag_y = bitconverter.ToSingle(bytes, offset + 32),
-				offdiag_z = bitconverter.ToSingle(bytes, offset + 36),
-				compass_id = bytes[offset + 40],
-				cal_mask = bytes[offset + 41],
-				cal_status = bytes[offset + 42],
-				autosaved = bytes[offset + 43],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_EKF_STATUS_REPORT(byte[] bytes, int offset)
-		{
-			return new Msg_ekf_status_report
-			{
-				velocity_variance = bitconverter.ToSingle(bytes, offset + 0),
-				pos_horiz_variance = bitconverter.ToSingle(bytes, offset + 4),
-				pos_vert_variance = bitconverter.ToSingle(bytes, offset + 8),
-				compass_variance = bitconverter.ToSingle(bytes, offset + 12),
-				terrain_alt_variance = bitconverter.ToSingle(bytes, offset + 16),
-				flags = bitconverter.ToUInt16(bytes, offset + 20),
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_REPORT(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_report
-			{
-				delta_time = bitconverter.ToSingle(bytes, offset + 0),
-				delta_angle_x = bitconverter.ToSingle(bytes, offset + 4),
-				delta_angle_y = bitconverter.ToSingle(bytes, offset + 8),
-				delta_angle_z = bitconverter.ToSingle(bytes, offset + 12),
-				delta_velocity_x = bitconverter.ToSingle(bytes, offset + 16),
-				delta_velocity_y = bitconverter.ToSingle(bytes, offset + 20),
-				delta_velocity_z = bitconverter.ToSingle(bytes, offset + 24),
-				joint_roll = bitconverter.ToSingle(bytes, offset + 28),
-				joint_el = bitconverter.ToSingle(bytes, offset + 32),
-				joint_az = bitconverter.ToSingle(bytes, offset + 36),
-				target_system = bytes[offset + 40],
-				target_component = bytes[offset + 41],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_CONTROL(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_control
-			{
-				demanded_rate_x = bitconverter.ToSingle(bytes, offset + 0),
-				demanded_rate_y = bitconverter.ToSingle(bytes, offset + 4),
-				demanded_rate_z = bitconverter.ToSingle(bytes, offset + 8),
-				target_system = bytes[offset + 12],
-				target_component = bytes[offset + 13],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_RESET(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_reset
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_AXIS_CALIBRATION_PROGRESS(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_axis_calibration_progress
-			{
-				calibration_axis = bytes[offset + 0],
-				calibration_progress = bytes[offset + 1],
-				calibration_status = bytes[offset + 2],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_SET_HOME_OFFSETS(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_set_home_offsets
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_HOME_OFFSET_CALIBRATION_RESULT(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_home_offset_calibration_result
-			{
-				calibration_result = bytes[offset + 0],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_SET_FACTORY_PARAMETERS(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_set_factory_parameters
-			{
-				magic_1 = bitconverter.ToUInt32(bytes, offset + 0),
-				magic_2 = bitconverter.ToUInt32(bytes, offset + 4),
-				magic_3 = bitconverter.ToUInt32(bytes, offset + 8),
-				serial_number_pt_1 = bitconverter.ToUInt32(bytes, offset + 12),
-				serial_number_pt_2 = bitconverter.ToUInt32(bytes, offset + 16),
-				serial_number_pt_3 = bitconverter.ToUInt32(bytes, offset + 20),
-				assembly_year = bitconverter.ToUInt16(bytes, offset + 24),
-				target_system = bytes[offset + 26],
-				target_component = bytes[offset + 27],
-				assembly_month = bytes[offset + 28],
-				assembly_day = bytes[offset + 29],
-				assembly_hour = bytes[offset + 30],
-				assembly_minute = bytes[offset + 31],
-				assembly_second = bytes[offset + 32],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_FACTORY_PARAMETERS_LOADED(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_factory_parameters_loaded
-			{
-				dummy = bytes[offset + 0],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_ERASE_FIRMWARE_AND_CONFIG(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_erase_firmware_and_config
-			{
-				knock = bitconverter.ToUInt32(bytes, offset + 0),
-				target_system = bytes[offset + 4],
-				target_component = bytes[offset + 5],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_PERFORM_FACTORY_TESTS(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_perform_factory_tests
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GIMBAL_REPORT_FACTORY_TESTS_PROGRESS(byte[] bytes, int offset)
-		{
-			return new Msg_gimbal_report_factory_tests_progress
-			{
-				test = bytes[offset + 0],
-				test_section = bytes[offset + 1],
-				test_section_progress = bytes[offset + 2],
-				test_status = bytes[offset + 3],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GOPRO_POWER_ON(byte[] bytes, int offset)
-		{
-			return new Msg_gopro_power_on
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GOPRO_POWER_OFF(byte[] bytes, int offset)
-		{
-			return new Msg_gopro_power_off
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GOPRO_COMMAND(byte[] bytes, int offset)
-		{
-			return new Msg_gopro_command
-			{
-				target_system = bytes[offset + 0],
-				target_component = bytes[offset + 1],
-				gp_cmd_name_1 = bytes[offset + 2],
-				gp_cmd_name_2 = bytes[offset + 3],
-				gp_cmd_parm = bytes[offset + 4],
-			};
-		}
-
-		internal static MavlinkMessage Deserialize_GOPRO_RESPONSE(byte[] bytes, int offset)
-		{
-			return new Msg_gopro_response
-			{
-				gp_cmd_result = bitconverter.ToUInt16(bytes, offset + 0),
-				gp_cmd_name_1 = bytes[offset + 2],
-				gp_cmd_name_2 = bytes[offset + 3],
-				gp_cmd_response_status = bytes[offset + 4],
-				gp_cmd_response_argument = bytes[offset + 5],
-			};
-		}
 
 		internal static MavlinkMessage Deserialize_HEARTBEAT(byte[] bytes, int offset)
 		{
@@ -1372,6 +677,16 @@ namespace MavLink
 			};
 		}
 
+		internal static MavlinkMessage Deserialize_MISSION_REQUEST_INT(byte[] bytes, int offset)
+		{
+			return new Msg_mission_request_int
+			{
+				seq = bitconverter.ToUInt16(bytes, offset + 0),
+				target_system = bytes[offset + 2],
+				target_component = bytes[offset + 3],
+			};
+		}
+
 		internal static MavlinkMessage Deserialize_SAFETY_SET_ALLOWED_AREA(byte[] bytes, int offset)
 		{
 			return new Msg_safety_set_allowed_area
@@ -1406,12 +721,12 @@ namespace MavLink
 		{
 			return new Msg_attitude_quaternion_cov
 			{
-				time_boot_ms = bitconverter.ToUInt32(bytes, offset + 0),
-				q =  ByteArrayUtil.ToSingle(bytes, offset + 4, 4),
-				rollspeed = bitconverter.ToSingle(bytes, offset + 8),
-				pitchspeed = bitconverter.ToSingle(bytes, offset + 12),
-				yawspeed = bitconverter.ToSingle(bytes, offset + 16),
-				covariance =  ByteArrayUtil.ToSingle(bytes, offset + 20, 9),
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				q =  ByteArrayUtil.ToSingle(bytes, offset + 8, 4),
+				rollspeed = bitconverter.ToSingle(bytes, offset + 24),
+				pitchspeed = bitconverter.ToSingle(bytes, offset + 28),
+				yawspeed = bitconverter.ToSingle(bytes, offset + 32),
+				covariance =  ByteArrayUtil.ToSingle(bytes, offset + 36, 9),
 			};
 		}
 
@@ -1434,17 +749,16 @@ namespace MavLink
 		{
 			return new Msg_global_position_int_cov
 			{
-				time_utc = bitconverter.ToUInt64(bytes, offset + 0),
-				time_boot_ms = bitconverter.ToUInt32(bytes, offset + 8),
-				lat = bitconverter.ToInt32(bytes, offset + 12),
-				lon = bitconverter.ToInt32(bytes, offset + 16),
-				alt = bitconverter.ToInt32(bytes, offset + 20),
-				relative_alt = bitconverter.ToInt32(bytes, offset + 24),
-				vx = bitconverter.ToSingle(bytes, offset + 28),
-				vy = bitconverter.ToSingle(bytes, offset + 32),
-				vz = bitconverter.ToSingle(bytes, offset + 36),
-				covariance =  ByteArrayUtil.ToSingle(bytes, offset + 40, 36),
-				estimator_type = bytes[offset + 76],
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				lat = bitconverter.ToInt32(bytes, offset + 8),
+				lon = bitconverter.ToInt32(bytes, offset + 12),
+				alt = bitconverter.ToInt32(bytes, offset + 16),
+				relative_alt = bitconverter.ToInt32(bytes, offset + 20),
+				vx = bitconverter.ToSingle(bytes, offset + 24),
+				vy = bitconverter.ToSingle(bytes, offset + 28),
+				vz = bitconverter.ToSingle(bytes, offset + 32),
+				covariance =  ByteArrayUtil.ToSingle(bytes, offset + 36, 36),
+				estimator_type = bytes[offset + 180],
 			};
 		}
 
@@ -1452,19 +766,18 @@ namespace MavLink
 		{
 			return new Msg_local_position_ned_cov
 			{
-				time_utc = bitconverter.ToUInt64(bytes, offset + 0),
-				time_boot_ms = bitconverter.ToUInt32(bytes, offset + 8),
-				x = bitconverter.ToSingle(bytes, offset + 12),
-				y = bitconverter.ToSingle(bytes, offset + 16),
-				z = bitconverter.ToSingle(bytes, offset + 20),
-				vx = bitconverter.ToSingle(bytes, offset + 24),
-				vy = bitconverter.ToSingle(bytes, offset + 28),
-				vz = bitconverter.ToSingle(bytes, offset + 32),
-				ax = bitconverter.ToSingle(bytes, offset + 36),
-				ay = bitconverter.ToSingle(bytes, offset + 40),
-				az = bitconverter.ToSingle(bytes, offset + 44),
-				covariance =  ByteArrayUtil.ToSingle(bytes, offset + 48, 45),
-				estimator_type = bytes[offset + 93],
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				x = bitconverter.ToSingle(bytes, offset + 8),
+				y = bitconverter.ToSingle(bytes, offset + 12),
+				z = bitconverter.ToSingle(bytes, offset + 16),
+				vx = bitconverter.ToSingle(bytes, offset + 20),
+				vy = bitconverter.ToSingle(bytes, offset + 24),
+				vz = bitconverter.ToSingle(bytes, offset + 28),
+				ax = bitconverter.ToSingle(bytes, offset + 32),
+				ay = bitconverter.ToSingle(bytes, offset + 36),
+				az = bitconverter.ToSingle(bytes, offset + 40),
+				covariance =  ByteArrayUtil.ToSingle(bytes, offset + 44, 45),
+				estimator_type = bytes[offset + 224],
 			};
 		}
 
@@ -1649,13 +962,13 @@ namespace MavLink
 			{
 				time_boot_ms = bitconverter.ToUInt32(bytes, offset + 0),
 				q =  ByteArrayUtil.ToSingle(bytes, offset + 4, 4),
-				body_roll_rate = bitconverter.ToSingle(bytes, offset + 8),
-				body_pitch_rate = bitconverter.ToSingle(bytes, offset + 12),
-				body_yaw_rate = bitconverter.ToSingle(bytes, offset + 16),
-				thrust = bitconverter.ToSingle(bytes, offset + 20),
-				target_system = bytes[offset + 24],
-				target_component = bytes[offset + 25],
-				type_mask = bytes[offset + 26],
+				body_roll_rate = bitconverter.ToSingle(bytes, offset + 20),
+				body_pitch_rate = bitconverter.ToSingle(bytes, offset + 24),
+				body_yaw_rate = bitconverter.ToSingle(bytes, offset + 28),
+				thrust = bitconverter.ToSingle(bytes, offset + 32),
+				target_system = bytes[offset + 36],
+				target_component = bytes[offset + 37],
+				type_mask = bytes[offset + 38],
 			};
 		}
 
@@ -1665,11 +978,11 @@ namespace MavLink
 			{
 				time_boot_ms = bitconverter.ToUInt32(bytes, offset + 0),
 				q =  ByteArrayUtil.ToSingle(bytes, offset + 4, 4),
-				body_roll_rate = bitconverter.ToSingle(bytes, offset + 8),
-				body_pitch_rate = bitconverter.ToSingle(bytes, offset + 12),
-				body_yaw_rate = bitconverter.ToSingle(bytes, offset + 16),
-				thrust = bitconverter.ToSingle(bytes, offset + 20),
-				type_mask = bytes[offset + 24],
+				body_roll_rate = bitconverter.ToSingle(bytes, offset + 20),
+				body_pitch_rate = bitconverter.ToSingle(bytes, offset + 24),
+				body_yaw_rate = bitconverter.ToSingle(bytes, offset + 28),
+				thrust = bitconverter.ToSingle(bytes, offset + 32),
+				type_mask = bytes[offset + 36],
 			};
 		}
 
@@ -1834,6 +1147,17 @@ namespace MavLink
 				chan11_raw = bitconverter.ToUInt16(bytes, offset + 28),
 				chan12_raw = bitconverter.ToUInt16(bytes, offset + 30),
 				rssi = bytes[offset + 32],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_HIL_ACTUATOR_CONTROLS(byte[] bytes, int offset)
+		{
+			return new Msg_hil_actuator_controls
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				flags = bitconverter.ToUInt64(bytes, offset + 8),
+				controls =  ByteArrayUtil.ToSingle(bytes, offset + 16, 16),
+				mode = bytes[offset + 80],
 			};
 		}
 
@@ -2084,20 +1408,20 @@ namespace MavLink
 			{
 				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
 				attitude_quaternion =  ByteArrayUtil.ToSingle(bytes, offset + 8, 4),
-				rollspeed = bitconverter.ToSingle(bytes, offset + 12),
-				pitchspeed = bitconverter.ToSingle(bytes, offset + 16),
-				yawspeed = bitconverter.ToSingle(bytes, offset + 20),
-				lat = bitconverter.ToInt32(bytes, offset + 24),
-				lon = bitconverter.ToInt32(bytes, offset + 28),
-				alt = bitconverter.ToInt32(bytes, offset + 32),
-				vx = bitconverter.ToInt16(bytes, offset + 36),
-				vy = bitconverter.ToInt16(bytes, offset + 38),
-				vz = bitconverter.ToInt16(bytes, offset + 40),
-				ind_airspeed = bitconverter.ToUInt16(bytes, offset + 42),
-				true_airspeed = bitconverter.ToUInt16(bytes, offset + 44),
-				xacc = bitconverter.ToInt16(bytes, offset + 46),
-				yacc = bitconverter.ToInt16(bytes, offset + 48),
-				zacc = bitconverter.ToInt16(bytes, offset + 50),
+				rollspeed = bitconverter.ToSingle(bytes, offset + 24),
+				pitchspeed = bitconverter.ToSingle(bytes, offset + 28),
+				yawspeed = bitconverter.ToSingle(bytes, offset + 32),
+				lat = bitconverter.ToInt32(bytes, offset + 36),
+				lon = bitconverter.ToInt32(bytes, offset + 40),
+				alt = bitconverter.ToInt32(bytes, offset + 44),
+				vx = bitconverter.ToInt16(bytes, offset + 48),
+				vy = bitconverter.ToInt16(bytes, offset + 50),
+				vz = bitconverter.ToInt16(bytes, offset + 52),
+				ind_airspeed = bitconverter.ToUInt16(bytes, offset + 54),
+				true_airspeed = bitconverter.ToUInt16(bytes, offset + 56),
+				xacc = bitconverter.ToInt16(bytes, offset + 58),
+				yacc = bitconverter.ToInt16(bytes, offset + 60),
+				zacc = bitconverter.ToInt16(bytes, offset + 62),
 			};
 		}
 
@@ -2349,7 +1673,7 @@ namespace MavLink
 				lon = bitconverter.ToInt32(bytes, offset + 4),
 				grid_spacing = bitconverter.ToUInt16(bytes, offset + 8),
 				data =  ByteArrayUtil.ToInt16(bytes, offset + 10, 16),
-				gridbit = bytes[offset + 26],
+				gridbit = bytes[offset + 42],
 			};
 		}
 
@@ -2393,9 +1717,9 @@ namespace MavLink
 			{
 				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
 				q =  ByteArrayUtil.ToSingle(bytes, offset + 8, 4),
-				x = bitconverter.ToSingle(bytes, offset + 12),
-				y = bitconverter.ToSingle(bytes, offset + 16),
-				z = bitconverter.ToSingle(bytes, offset + 20),
+				x = bitconverter.ToSingle(bytes, offset + 24),
+				y = bitconverter.ToSingle(bytes, offset + 28),
+				z = bitconverter.ToSingle(bytes, offset + 32),
 			};
 		}
 
@@ -2405,9 +1729,9 @@ namespace MavLink
 			{
 				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
 				controls =  ByteArrayUtil.ToSingle(bytes, offset + 8, 8),
-				group_mlx = bytes[offset + 16],
-				target_system = bytes[offset + 17],
-				target_component = bytes[offset + 18],
+				group_mlx = bytes[offset + 40],
+				target_system = bytes[offset + 41],
+				target_component = bytes[offset + 42],
 			};
 		}
 
@@ -2417,7 +1741,86 @@ namespace MavLink
 			{
 				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
 				controls =  ByteArrayUtil.ToSingle(bytes, offset + 8, 8),
-				group_mlx = bytes[offset + 16],
+				group_mlx = bytes[offset + 40],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_ALTITUDE(byte[] bytes, int offset)
+		{
+			return new Msg_altitude
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				altitude_monotonic = bitconverter.ToSingle(bytes, offset + 8),
+				altitude_amsl = bitconverter.ToSingle(bytes, offset + 12),
+				altitude_local = bitconverter.ToSingle(bytes, offset + 16),
+				altitude_relative = bitconverter.ToSingle(bytes, offset + 20),
+				altitude_terrain = bitconverter.ToSingle(bytes, offset + 24),
+				bottom_clearance = bitconverter.ToSingle(bytes, offset + 28),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_RESOURCE_REQUEST(byte[] bytes, int offset)
+		{
+			return new Msg_resource_request
+			{
+				request_id = bytes[offset + 0],
+				uri_type = bytes[offset + 1],
+				uri =  ByteArrayUtil.ToUInt8(bytes, offset + 2, 120),
+				transfer_type = bytes[offset + 122],
+				storage =  ByteArrayUtil.ToUInt8(bytes, offset + 123, 120),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_SCALED_PRESSURE3(byte[] bytes, int offset)
+		{
+			return new Msg_scaled_pressure3
+			{
+				time_boot_ms = bitconverter.ToUInt32(bytes, offset + 0),
+				press_abs = bitconverter.ToSingle(bytes, offset + 4),
+				press_diff = bitconverter.ToSingle(bytes, offset + 8),
+				temperature = bitconverter.ToInt16(bytes, offset + 12),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_FOLLOW_TARGET(byte[] bytes, int offset)
+		{
+			return new Msg_follow_target
+			{
+				timestamp = bitconverter.ToUInt64(bytes, offset + 0),
+				custom_state = bitconverter.ToUInt64(bytes, offset + 8),
+				lat = bitconverter.ToInt32(bytes, offset + 16),
+				lon = bitconverter.ToInt32(bytes, offset + 20),
+				alt = bitconverter.ToSingle(bytes, offset + 24),
+				vel =  ByteArrayUtil.ToSingle(bytes, offset + 28, 3),
+				acc =  ByteArrayUtil.ToSingle(bytes, offset + 40, 3),
+				attitude_q =  ByteArrayUtil.ToSingle(bytes, offset + 52, 4),
+				rates =  ByteArrayUtil.ToSingle(bytes, offset + 68, 3),
+				position_cov =  ByteArrayUtil.ToSingle(bytes, offset + 80, 3),
+				est_capabilities = bytes[offset + 92],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_CONTROL_SYSTEM_STATE(byte[] bytes, int offset)
+		{
+			return new Msg_control_system_state
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				x_acc = bitconverter.ToSingle(bytes, offset + 8),
+				y_acc = bitconverter.ToSingle(bytes, offset + 12),
+				z_acc = bitconverter.ToSingle(bytes, offset + 16),
+				x_vel = bitconverter.ToSingle(bytes, offset + 20),
+				y_vel = bitconverter.ToSingle(bytes, offset + 24),
+				z_vel = bitconverter.ToSingle(bytes, offset + 28),
+				x_pos = bitconverter.ToSingle(bytes, offset + 32),
+				y_pos = bitconverter.ToSingle(bytes, offset + 36),
+				z_pos = bitconverter.ToSingle(bytes, offset + 40),
+				airspeed = bitconverter.ToSingle(bytes, offset + 44),
+				vel_variance =  ByteArrayUtil.ToSingle(bytes, offset + 48, 3),
+				pos_variance =  ByteArrayUtil.ToSingle(bytes, offset + 60, 3),
+				q =  ByteArrayUtil.ToSingle(bytes, offset + 72, 4),
+				roll_rate = bitconverter.ToSingle(bytes, offset + 88),
+				pitch_rate = bitconverter.ToSingle(bytes, offset + 92),
+				yaw_rate = bitconverter.ToSingle(bytes, offset + 96),
 			};
 		}
 
@@ -2429,11 +1832,11 @@ namespace MavLink
 				energy_consumed = bitconverter.ToInt32(bytes, offset + 4),
 				temperature = bitconverter.ToInt16(bytes, offset + 8),
 				voltages =  ByteArrayUtil.ToUInt16(bytes, offset + 10, 10),
-				current_battery = bitconverter.ToInt16(bytes, offset + 20),
-				id = bytes[offset + 22],
-				battery_function = bytes[offset + 23],
-				type = bytes[offset + 24],
-				battery_remaining = bitconverter.ToInt8(bytes, offset + 25),
+				current_battery = bitconverter.ToInt16(bytes, offset + 30),
+				id = bytes[offset + 32],
+				battery_function = bytes[offset + 33],
+				type = bytes[offset + 34],
+				battery_remaining = bitconverter.ToInt8(bytes, offset + 35),
 			};
 		}
 
@@ -2452,6 +1855,255 @@ namespace MavLink
 				flight_custom_version =  ByteArrayUtil.ToUInt8(bytes, offset + 36, 8),
 				middleware_custom_version =  ByteArrayUtil.ToUInt8(bytes, offset + 44, 8),
 				os_custom_version =  ByteArrayUtil.ToUInt8(bytes, offset + 52, 8),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_LANDING_TARGET(byte[] bytes, int offset)
+		{
+			return new Msg_landing_target
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				angle_x = bitconverter.ToSingle(bytes, offset + 8),
+				angle_y = bitconverter.ToSingle(bytes, offset + 12),
+				distance = bitconverter.ToSingle(bytes, offset + 16),
+				size_x = bitconverter.ToSingle(bytes, offset + 20),
+				size_y = bitconverter.ToSingle(bytes, offset + 24),
+				target_num = bytes[offset + 28],
+				frame = bytes[offset + 29],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_ESTIMATOR_STATUS(byte[] bytes, int offset)
+		{
+			return new Msg_estimator_status
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				vel_ratio = bitconverter.ToSingle(bytes, offset + 8),
+				pos_horiz_ratio = bitconverter.ToSingle(bytes, offset + 12),
+				pos_vert_ratio = bitconverter.ToSingle(bytes, offset + 16),
+				mag_ratio = bitconverter.ToSingle(bytes, offset + 20),
+				hagl_ratio = bitconverter.ToSingle(bytes, offset + 24),
+				tas_ratio = bitconverter.ToSingle(bytes, offset + 28),
+				pos_horiz_accuracy = bitconverter.ToSingle(bytes, offset + 32),
+				pos_vert_accuracy = bitconverter.ToSingle(bytes, offset + 36),
+				flags = bitconverter.ToUInt16(bytes, offset + 40),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_WIND_COV(byte[] bytes, int offset)
+		{
+			return new Msg_wind_cov
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				wind_x = bitconverter.ToSingle(bytes, offset + 8),
+				wind_y = bitconverter.ToSingle(bytes, offset + 12),
+				wind_z = bitconverter.ToSingle(bytes, offset + 16),
+				var_horiz = bitconverter.ToSingle(bytes, offset + 20),
+				var_vert = bitconverter.ToSingle(bytes, offset + 24),
+				wind_alt = bitconverter.ToSingle(bytes, offset + 28),
+				horiz_accuracy = bitconverter.ToSingle(bytes, offset + 32),
+				vert_accuracy = bitconverter.ToSingle(bytes, offset + 36),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_GPS_INPUT(byte[] bytes, int offset)
+		{
+			return new Msg_gps_input
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				time_week_ms = bitconverter.ToUInt32(bytes, offset + 8),
+				lat = bitconverter.ToInt32(bytes, offset + 12),
+				lon = bitconverter.ToInt32(bytes, offset + 16),
+				alt = bitconverter.ToSingle(bytes, offset + 20),
+				hdop = bitconverter.ToSingle(bytes, offset + 24),
+				vdop = bitconverter.ToSingle(bytes, offset + 28),
+				vn = bitconverter.ToSingle(bytes, offset + 32),
+				ve = bitconverter.ToSingle(bytes, offset + 36),
+				vd = bitconverter.ToSingle(bytes, offset + 40),
+				speed_accuracy = bitconverter.ToSingle(bytes, offset + 44),
+				horiz_accuracy = bitconverter.ToSingle(bytes, offset + 48),
+				vert_accuracy = bitconverter.ToSingle(bytes, offset + 52),
+				ignore_flags = bitconverter.ToUInt16(bytes, offset + 56),
+				time_week = bitconverter.ToUInt16(bytes, offset + 58),
+				gps_id = bytes[offset + 60],
+				fix_type = bytes[offset + 61],
+				satellites_visible = bytes[offset + 62],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_GPS_RTCM_DATA(byte[] bytes, int offset)
+		{
+			return new Msg_gps_rtcm_data
+			{
+				flags = bytes[offset + 0],
+				len = bytes[offset + 1],
+				data =  ByteArrayUtil.ToUInt8(bytes, offset + 2, 180),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_HIGH_LATENCY(byte[] bytes, int offset)
+		{
+			return new Msg_high_latency
+			{
+				custom_mode = bitconverter.ToUInt32(bytes, offset + 0),
+				latitude = bitconverter.ToInt32(bytes, offset + 4),
+				longitude = bitconverter.ToInt32(bytes, offset + 8),
+				roll = bitconverter.ToInt16(bytes, offset + 12),
+				pitch = bitconverter.ToInt16(bytes, offset + 14),
+				heading = bitconverter.ToUInt16(bytes, offset + 16),
+				heading_sp = bitconverter.ToInt16(bytes, offset + 18),
+				altitude_amsl = bitconverter.ToInt16(bytes, offset + 20),
+				altitude_sp = bitconverter.ToInt16(bytes, offset + 22),
+				wp_distance = bitconverter.ToUInt16(bytes, offset + 24),
+				base_mode = bytes[offset + 26],
+				landed_state = bytes[offset + 27],
+				throttle = bitconverter.ToInt8(bytes, offset + 28),
+				airspeed = bytes[offset + 29],
+				airspeed_sp = bytes[offset + 30],
+				groundspeed = bytes[offset + 31],
+				climb_rate = bitconverter.ToInt8(bytes, offset + 32),
+				gps_nsat = bytes[offset + 33],
+				gps_fix_type = bytes[offset + 34],
+				battery_remaining = bytes[offset + 35],
+				temperature = bitconverter.ToInt8(bytes, offset + 36),
+				temperature_air = bitconverter.ToInt8(bytes, offset + 37),
+				failsafe = bytes[offset + 38],
+				wp_num = bytes[offset + 39],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_HIGH_LATENCY2(byte[] bytes, int offset)
+		{
+			return new Msg_high_latency2
+			{
+				timestamp = bitconverter.ToUInt32(bytes, offset + 0),
+				latitude = bitconverter.ToInt32(bytes, offset + 4),
+				longitude = bitconverter.ToInt32(bytes, offset + 8),
+				custom_mode = bitconverter.ToUInt16(bytes, offset + 12),
+				altitude = bitconverter.ToInt16(bytes, offset + 14),
+				target_altitude = bitconverter.ToInt16(bytes, offset + 16),
+				target_distance = bitconverter.ToUInt16(bytes, offset + 18),
+				wp_num = bitconverter.ToUInt16(bytes, offset + 20),
+				failure_flags = bitconverter.ToUInt16(bytes, offset + 22),
+				type = bytes[offset + 24],
+				autopilot = bytes[offset + 25],
+				heading = bytes[offset + 26],
+				target_heading = bytes[offset + 27],
+				throttle = bytes[offset + 28],
+				airspeed = bytes[offset + 29],
+				airspeed_sp = bytes[offset + 30],
+				groundspeed = bytes[offset + 31],
+				windspeed = bytes[offset + 32],
+				wind_heading = bytes[offset + 33],
+				eph = bytes[offset + 34],
+				epv = bytes[offset + 35],
+				temperature_air = bitconverter.ToInt8(bytes, offset + 36),
+				climb_rate = bitconverter.ToInt8(bytes, offset + 37),
+				battery = bitconverter.ToInt8(bytes, offset + 38),
+				custom0 = bitconverter.ToInt8(bytes, offset + 39),
+				custom1 = bitconverter.ToInt8(bytes, offset + 40),
+				custom2 = bitconverter.ToInt8(bytes, offset + 41),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_VIBRATION(byte[] bytes, int offset)
+		{
+			return new Msg_vibration
+			{
+				time_usec = bitconverter.ToUInt64(bytes, offset + 0),
+				vibration_x = bitconverter.ToSingle(bytes, offset + 8),
+				vibration_y = bitconverter.ToSingle(bytes, offset + 12),
+				vibration_z = bitconverter.ToSingle(bytes, offset + 16),
+				clipping_0 = bitconverter.ToUInt32(bytes, offset + 20),
+				clipping_1 = bitconverter.ToUInt32(bytes, offset + 24),
+				clipping_2 = bitconverter.ToUInt32(bytes, offset + 28),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_HOME_POSITION(byte[] bytes, int offset)
+		{
+			return new Msg_home_position
+			{
+				latitude = bitconverter.ToInt32(bytes, offset + 0),
+				longitude = bitconverter.ToInt32(bytes, offset + 4),
+				altitude = bitconverter.ToInt32(bytes, offset + 8),
+				x = bitconverter.ToSingle(bytes, offset + 12),
+				y = bitconverter.ToSingle(bytes, offset + 16),
+				z = bitconverter.ToSingle(bytes, offset + 20),
+				q =  ByteArrayUtil.ToSingle(bytes, offset + 24, 4),
+				approach_x = bitconverter.ToSingle(bytes, offset + 40),
+				approach_y = bitconverter.ToSingle(bytes, offset + 44),
+				approach_z = bitconverter.ToSingle(bytes, offset + 48),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_SET_HOME_POSITION(byte[] bytes, int offset)
+		{
+			return new Msg_set_home_position
+			{
+				latitude = bitconverter.ToInt32(bytes, offset + 0),
+				longitude = bitconverter.ToInt32(bytes, offset + 4),
+				altitude = bitconverter.ToInt32(bytes, offset + 8),
+				x = bitconverter.ToSingle(bytes, offset + 12),
+				y = bitconverter.ToSingle(bytes, offset + 16),
+				z = bitconverter.ToSingle(bytes, offset + 20),
+				q =  ByteArrayUtil.ToSingle(bytes, offset + 24, 4),
+				approach_x = bitconverter.ToSingle(bytes, offset + 40),
+				approach_y = bitconverter.ToSingle(bytes, offset + 44),
+				approach_z = bitconverter.ToSingle(bytes, offset + 48),
+				target_system = bytes[offset + 52],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_MESSAGE_INTERVAL(byte[] bytes, int offset)
+		{
+			return new Msg_message_interval
+			{
+				interval_us = bitconverter.ToInt32(bytes, offset + 0),
+				message_id = bitconverter.ToUInt16(bytes, offset + 4),
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_EXTENDED_SYS_STATE(byte[] bytes, int offset)
+		{
+			return new Msg_extended_sys_state
+			{
+				vtol_state = bytes[offset + 0],
+				landed_state = bytes[offset + 1],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_ADSB_VEHICLE(byte[] bytes, int offset)
+		{
+			return new Msg_adsb_vehicle
+			{
+				ICAO_address = bitconverter.ToUInt32(bytes, offset + 0),
+				lat = bitconverter.ToInt32(bytes, offset + 4),
+				lon = bitconverter.ToInt32(bytes, offset + 8),
+				altitude = bitconverter.ToInt32(bytes, offset + 12),
+				heading = bitconverter.ToUInt16(bytes, offset + 16),
+				hor_velocity = bitconverter.ToUInt16(bytes, offset + 18),
+				ver_velocity = bitconverter.ToInt16(bytes, offset + 20),
+				flags = bitconverter.ToUInt16(bytes, offset + 22),
+				squawk = bitconverter.ToUInt16(bytes, offset + 24),
+				altitude_type = bytes[offset + 26],
+				callsign =  ByteArrayUtil.ToChar(bytes, offset + 27, 9),
+				emitter_type = bytes[offset + 36],
+				tslc = bytes[offset + 37],
+			};
+		}
+
+		internal static MavlinkMessage Deserialize_COLLISION(byte[] bytes, int offset)
+		{
+			return new Msg_collision
+			{
+				id = bitconverter.ToUInt32(bytes, offset + 0),
+				time_to_minimum_delta = bitconverter.ToSingle(bytes, offset + 4),
+				altitude_minimum_delta = bitconverter.ToSingle(bytes, offset + 8),
+				horizontal_minimum_delta = bitconverter.ToSingle(bytes, offset + 12),
+				src = bytes[offset + 16],
+				action = bytes[offset + 17],
+				threat_level = bytes[offset + 18],
 			};
 		}
 
@@ -2527,618 +2179,6 @@ namespace MavLink
 				value = bitconverter.ToSingle(bytes, offset + 4),
 				ind = bytes[offset + 8],
 			};
-		}
-
-		internal static int Serialize_SENSOR_OFFSETS(this Msg_sensor_offsets msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.mag_declination, bytes, offset + 0);
-			bitconverter.GetBytes(msg.raw_press, bytes, offset + 4);
-			bitconverter.GetBytes(msg.raw_temp, bytes, offset + 8);
-			bitconverter.GetBytes(msg.gyro_cal_x, bytes, offset + 12);
-			bitconverter.GetBytes(msg.gyro_cal_y, bytes, offset + 16);
-			bitconverter.GetBytes(msg.gyro_cal_z, bytes, offset + 20);
-			bitconverter.GetBytes(msg.accel_cal_x, bytes, offset + 24);
-			bitconverter.GetBytes(msg.accel_cal_y, bytes, offset + 28);
-			bitconverter.GetBytes(msg.accel_cal_z, bytes, offset + 32);
-			bitconverter.GetBytes(msg.mag_ofs_x, bytes, offset + 36);
-			bitconverter.GetBytes(msg.mag_ofs_y, bytes, offset + 38);
-			bitconverter.GetBytes(msg.mag_ofs_z, bytes, offset + 40);
-			offset += 42;
-			return 150;
-		}
-
-		internal static int Serialize_SET_MAG_OFFSETS(this Msg_set_mag_offsets msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.mag_ofs_x, bytes, offset + 0);
-			bitconverter.GetBytes(msg.mag_ofs_y, bytes, offset + 2);
-			bitconverter.GetBytes(msg.mag_ofs_z, bytes, offset + 4);
-			bytes[offset + 6] = msg.target_system;
-			bytes[offset + 7] = msg.target_component;
-			offset += 8;
-			return 151;
-		}
-
-		internal static int Serialize_MEMINFO(this Msg_meminfo msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.brkval, bytes, offset + 0);
-			bitconverter.GetBytes(msg.freemem, bytes, offset + 2);
-			offset += 4;
-			return 152;
-		}
-
-		internal static int Serialize_AP_ADC(this Msg_ap_adc msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.adc1, bytes, offset + 0);
-			bitconverter.GetBytes(msg.adc2, bytes, offset + 2);
-			bitconverter.GetBytes(msg.adc3, bytes, offset + 4);
-			bitconverter.GetBytes(msg.adc4, bytes, offset + 6);
-			bitconverter.GetBytes(msg.adc5, bytes, offset + 8);
-			bitconverter.GetBytes(msg.adc6, bytes, offset + 10);
-			offset += 12;
-			return 153;
-		}
-
-		internal static int Serialize_DIGICAM_CONFIGURE(this Msg_digicam_configure msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.extra_value, bytes, offset + 0);
-			bitconverter.GetBytes(msg.shutter_speed, bytes, offset + 4);
-			bytes[offset + 6] = msg.target_system;
-			bytes[offset + 7] = msg.target_component;
-			bytes[offset + 8] = msg.mode;
-			bytes[offset + 9] = msg.aperture;
-			bytes[offset + 10] = msg.iso;
-			bytes[offset + 11] = msg.exposure_type;
-			bytes[offset + 12] = msg.command_id;
-			bytes[offset + 13] = msg.engine_cut_off;
-			bytes[offset + 14] = msg.extra_param;
-			offset += 15;
-			return 154;
-		}
-
-		internal static int Serialize_DIGICAM_CONTROL(this Msg_digicam_control msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.extra_value, bytes, offset + 0);
-			bytes[offset + 4] = msg.target_system;
-			bytes[offset + 5] = msg.target_component;
-			bytes[offset + 6] = msg.session;
-			bytes[offset + 7] = msg.zoom_pos;
-			bytes[offset + 8] = unchecked((byte)msg.zoom_step);
-			bytes[offset + 9] = msg.focus_lock;
-			bytes[offset + 10] = msg.shot;
-			bytes[offset + 11] = msg.command_id;
-			bytes[offset + 12] = msg.extra_param;
-			offset += 13;
-			return 155;
-		}
-
-		internal static int Serialize_MOUNT_CONFIGURE(this Msg_mount_configure msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			bytes[offset + 2] = msg.mount_mode;
-			bytes[offset + 3] = msg.stab_roll;
-			bytes[offset + 4] = msg.stab_pitch;
-			bytes[offset + 5] = msg.stab_yaw;
-			offset += 6;
-			return 156;
-		}
-
-		internal static int Serialize_MOUNT_CONTROL(this Msg_mount_control msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.input_a, bytes, offset + 0);
-			bitconverter.GetBytes(msg.input_b, bytes, offset + 4);
-			bitconverter.GetBytes(msg.input_c, bytes, offset + 8);
-			bytes[offset + 12] = msg.target_system;
-			bytes[offset + 13] = msg.target_component;
-			bytes[offset + 14] = msg.save_position;
-			offset += 15;
-			return 157;
-		}
-
-		internal static int Serialize_MOUNT_STATUS(this Msg_mount_status msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.pointing_a, bytes, offset + 0);
-			bitconverter.GetBytes(msg.pointing_b, bytes, offset + 4);
-			bitconverter.GetBytes(msg.pointing_c, bytes, offset + 8);
-			bytes[offset + 12] = msg.target_system;
-			bytes[offset + 13] = msg.target_component;
-			offset += 14;
-			return 158;
-		}
-
-		internal static int Serialize_FENCE_POINT(this Msg_fence_point msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.lat, bytes, offset + 0);
-			bitconverter.GetBytes(msg.lng, bytes, offset + 4);
-			bytes[offset + 8] = msg.target_system;
-			bytes[offset + 9] = msg.target_component;
-			bytes[offset + 10] = msg.idx;
-			bytes[offset + 11] = msg.count;
-			offset += 12;
-			return 160;
-		}
-
-		internal static int Serialize_FENCE_FETCH_POINT(this Msg_fence_fetch_point msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			bytes[offset + 2] = msg.idx;
-			offset += 3;
-			return 161;
-		}
-
-		internal static int Serialize_FENCE_STATUS(this Msg_fence_status msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.breach_time, bytes, offset + 0);
-			bitconverter.GetBytes(msg.breach_count, bytes, offset + 4);
-			bytes[offset + 6] = msg.breach_status;
-			bytes[offset + 7] = msg.breach_type;
-			offset += 8;
-			return 162;
-		}
-
-		internal static int Serialize_AHRS(this Msg_ahrs msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.omegaIx, bytes, offset + 0);
-			bitconverter.GetBytes(msg.omegaIy, bytes, offset + 4);
-			bitconverter.GetBytes(msg.omegaIz, bytes, offset + 8);
-			bitconverter.GetBytes(msg.accel_weight, bytes, offset + 12);
-			bitconverter.GetBytes(msg.renorm_val, bytes, offset + 16);
-			bitconverter.GetBytes(msg.error_rp, bytes, offset + 20);
-			bitconverter.GetBytes(msg.error_yaw, bytes, offset + 24);
-			offset += 28;
-			return 163;
-		}
-
-		internal static int Serialize_SIMSTATE(this Msg_simstate msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.roll, bytes, offset + 0);
-			bitconverter.GetBytes(msg.pitch, bytes, offset + 4);
-			bitconverter.GetBytes(msg.yaw, bytes, offset + 8);
-			bitconverter.GetBytes(msg.xacc, bytes, offset + 12);
-			bitconverter.GetBytes(msg.yacc, bytes, offset + 16);
-			bitconverter.GetBytes(msg.zacc, bytes, offset + 20);
-			bitconverter.GetBytes(msg.xgyro, bytes, offset + 24);
-			bitconverter.GetBytes(msg.ygyro, bytes, offset + 28);
-			bitconverter.GetBytes(msg.zgyro, bytes, offset + 32);
-			bitconverter.GetBytes(msg.lat, bytes, offset + 36);
-			bitconverter.GetBytes(msg.lng, bytes, offset + 40);
-			offset += 44;
-			return 164;
-		}
-
-		internal static int Serialize_HWSTATUS(this Msg_hwstatus msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.Vcc, bytes, offset + 0);
-			bytes[offset + 2] = msg.I2Cerr;
-			offset += 3;
-			return 165;
-		}
-
-		internal static int Serialize_RADIO(this Msg_radio msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.rxerrors, bytes, offset + 0);
-			bitconverter.GetBytes(msg.@fixed, bytes, offset + 2);
-			bytes[offset + 4] = msg.rssi;
-			bytes[offset + 5] = msg.remrssi;
-			bytes[offset + 6] = msg.txbuf;
-			bytes[offset + 7] = msg.noise;
-			bytes[offset + 8] = msg.remnoise;
-			offset += 9;
-			return 166;
-		}
-
-		internal static int Serialize_LIMITS_STATUS(this Msg_limits_status msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.last_trigger, bytes, offset + 0);
-			bitconverter.GetBytes(msg.last_action, bytes, offset + 4);
-			bitconverter.GetBytes(msg.last_recovery, bytes, offset + 8);
-			bitconverter.GetBytes(msg.last_clear, bytes, offset + 12);
-			bitconverter.GetBytes(msg.breach_count, bytes, offset + 16);
-			bytes[offset + 18] = msg.limits_state;
-			bytes[offset + 19] = msg.mods_enabled;
-			bytes[offset + 20] = msg.mods_required;
-			bytes[offset + 21] = msg.mods_triggered;
-			offset += 22;
-			return 167;
-		}
-
-		internal static int Serialize_WIND(this Msg_wind msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.direction, bytes, offset + 0);
-			bitconverter.GetBytes(msg.speed, bytes, offset + 4);
-			bitconverter.GetBytes(msg.speed_z, bytes, offset + 8);
-			offset += 12;
-			return 168;
-		}
-
-		internal static int Serialize_DATA16(this Msg_data16 msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.type;
-			bytes[offset + 1] = msg.len;
-			ByteArrayUtil.ToByteArray(msg.data, bytes, offset + 2, 16);
-			offset += 18;
-			return 169;
-		}
-
-		internal static int Serialize_DATA32(this Msg_data32 msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.type;
-			bytes[offset + 1] = msg.len;
-			ByteArrayUtil.ToByteArray(msg.data, bytes, offset + 2, 32);
-			offset += 34;
-			return 170;
-		}
-
-		internal static int Serialize_DATA64(this Msg_data64 msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.type;
-			bytes[offset + 1] = msg.len;
-			ByteArrayUtil.ToByteArray(msg.data, bytes, offset + 2, 64);
-			offset += 66;
-			return 171;
-		}
-
-		internal static int Serialize_DATA96(this Msg_data96 msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.type;
-			bytes[offset + 1] = msg.len;
-			ByteArrayUtil.ToByteArray(msg.data, bytes, offset + 2, 96);
-			offset += 98;
-			return 172;
-		}
-
-		internal static int Serialize_RANGEFINDER(this Msg_rangefinder msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.distance, bytes, offset + 0);
-			bitconverter.GetBytes(msg.voltage, bytes, offset + 4);
-			offset += 8;
-			return 173;
-		}
-
-		internal static int Serialize_AIRSPEED_AUTOCAL(this Msg_airspeed_autocal msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.vx, bytes, offset + 0);
-			bitconverter.GetBytes(msg.vy, bytes, offset + 4);
-			bitconverter.GetBytes(msg.vz, bytes, offset + 8);
-			bitconverter.GetBytes(msg.diff_pressure, bytes, offset + 12);
-			bitconverter.GetBytes(msg.EAS2TAS, bytes, offset + 16);
-			bitconverter.GetBytes(msg.ratio, bytes, offset + 20);
-			bitconverter.GetBytes(msg.state_x, bytes, offset + 24);
-			bitconverter.GetBytes(msg.state_y, bytes, offset + 28);
-			bitconverter.GetBytes(msg.state_z, bytes, offset + 32);
-			bitconverter.GetBytes(msg.Pax, bytes, offset + 36);
-			bitconverter.GetBytes(msg.Pby, bytes, offset + 40);
-			bitconverter.GetBytes(msg.Pcz, bytes, offset + 44);
-			offset += 48;
-			return 174;
-		}
-
-		internal static int Serialize_RALLY_POINT(this Msg_rally_point msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.lat, bytes, offset + 0);
-			bitconverter.GetBytes(msg.lng, bytes, offset + 4);
-			bitconverter.GetBytes(msg.alt, bytes, offset + 8);
-			bitconverter.GetBytes(msg.break_alt, bytes, offset + 10);
-			bitconverter.GetBytes(msg.land_dir, bytes, offset + 12);
-			bytes[offset + 14] = msg.target_system;
-			bytes[offset + 15] = msg.target_component;
-			bytes[offset + 16] = msg.idx;
-			bytes[offset + 17] = msg.count;
-			bytes[offset + 18] = msg.flags;
-			offset += 19;
-			return 175;
-		}
-
-		internal static int Serialize_RALLY_FETCH_POINT(this Msg_rally_fetch_point msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			bytes[offset + 2] = msg.idx;
-			offset += 3;
-			return 176;
-		}
-
-		internal static int Serialize_COMPASSMOT_STATUS(this Msg_compassmot_status msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.current, bytes, offset + 0);
-			bitconverter.GetBytes(msg.CompensationX, bytes, offset + 4);
-			bitconverter.GetBytes(msg.CompensationY, bytes, offset + 8);
-			bitconverter.GetBytes(msg.CompensationZ, bytes, offset + 12);
-			bitconverter.GetBytes(msg.throttle, bytes, offset + 16);
-			bitconverter.GetBytes(msg.interference, bytes, offset + 18);
-			offset += 20;
-			return 177;
-		}
-
-		internal static int Serialize_AHRS2(this Msg_ahrs2 msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.roll, bytes, offset + 0);
-			bitconverter.GetBytes(msg.pitch, bytes, offset + 4);
-			bitconverter.GetBytes(msg.yaw, bytes, offset + 8);
-			bitconverter.GetBytes(msg.altitude, bytes, offset + 12);
-			bitconverter.GetBytes(msg.lat, bytes, offset + 16);
-			bitconverter.GetBytes(msg.lng, bytes, offset + 20);
-			offset += 24;
-			return 178;
-		}
-
-		internal static int Serialize_CAMERA_STATUS(this Msg_camera_status msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
-			bitconverter.GetBytes(msg.p1, bytes, offset + 8);
-			bitconverter.GetBytes(msg.p2, bytes, offset + 12);
-			bitconverter.GetBytes(msg.p3, bytes, offset + 16);
-			bitconverter.GetBytes(msg.p4, bytes, offset + 20);
-			bitconverter.GetBytes(msg.img_idx, bytes, offset + 24);
-			bytes[offset + 26] = msg.target_system;
-			bytes[offset + 27] = msg.cam_idx;
-			bytes[offset + 28] = msg.event_id;
-			offset += 29;
-			return 179;
-		}
-
-		internal static int Serialize_CAMERA_FEEDBACK(this Msg_camera_feedback msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
-			bitconverter.GetBytes(msg.lat, bytes, offset + 8);
-			bitconverter.GetBytes(msg.lng, bytes, offset + 12);
-			bitconverter.GetBytes(msg.alt_msl, bytes, offset + 16);
-			bitconverter.GetBytes(msg.alt_rel, bytes, offset + 20);
-			bitconverter.GetBytes(msg.roll, bytes, offset + 24);
-			bitconverter.GetBytes(msg.pitch, bytes, offset + 28);
-			bitconverter.GetBytes(msg.yaw, bytes, offset + 32);
-			bitconverter.GetBytes(msg.foc_len, bytes, offset + 36);
-			bitconverter.GetBytes(msg.img_idx, bytes, offset + 40);
-			bytes[offset + 42] = msg.target_system;
-			bytes[offset + 43] = msg.cam_idx;
-			bytes[offset + 44] = msg.flags;
-			offset += 45;
-			return 180;
-		}
-
-		internal static int Serialize_BATTERY2(this Msg_battery2 msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.voltage, bytes, offset + 0);
-			bitconverter.GetBytes(msg.current_battery, bytes, offset + 2);
-			offset += 4;
-			return 181;
-		}
-
-		internal static int Serialize_AHRS3(this Msg_ahrs3 msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.roll, bytes, offset + 0);
-			bitconverter.GetBytes(msg.pitch, bytes, offset + 4);
-			bitconverter.GetBytes(msg.yaw, bytes, offset + 8);
-			bitconverter.GetBytes(msg.altitude, bytes, offset + 12);
-			bitconverter.GetBytes(msg.lat, bytes, offset + 16);
-			bitconverter.GetBytes(msg.lng, bytes, offset + 20);
-			bitconverter.GetBytes(msg.v1, bytes, offset + 24);
-			bitconverter.GetBytes(msg.v2, bytes, offset + 28);
-			bitconverter.GetBytes(msg.v3, bytes, offset + 32);
-			bitconverter.GetBytes(msg.v4, bytes, offset + 36);
-			offset += 40;
-			return 182;
-		}
-
-		internal static int Serialize_AUTOPILOT_VERSION_REQUEST(this Msg_autopilot_version_request msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			offset += 2;
-			return 183;
-		}
-
-		internal static int Serialize_LED_CONTROL(this Msg_led_control msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			bytes[offset + 2] = msg.instance;
-			bytes[offset + 3] = msg.pattern;
-			bytes[offset + 4] = msg.custom_len;
-			ByteArrayUtil.ToByteArray(msg.custom_bytes, bytes, offset + 5, 24);
-			offset += 29;
-			return 186;
-		}
-
-		internal static int Serialize_MAG_CAL_PROGRESS(this Msg_mag_cal_progress msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.direction_x, bytes, offset + 0);
-			bitconverter.GetBytes(msg.direction_y, bytes, offset + 4);
-			bitconverter.GetBytes(msg.direction_z, bytes, offset + 8);
-			bytes[offset + 12] = msg.compass_id;
-			bytes[offset + 13] = msg.cal_mask;
-			bytes[offset + 14] = msg.cal_status;
-			bytes[offset + 15] = msg.attempt;
-			bytes[offset + 16] = msg.completion_pct;
-			ByteArrayUtil.ToByteArray(msg.completion_mask, bytes, offset + 17, 10);
-			offset += 27;
-			return 191;
-		}
-
-		internal static int Serialize_MAG_CAL_REPORT(this Msg_mag_cal_report msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.fitness, bytes, offset + 0);
-			bitconverter.GetBytes(msg.ofs_x, bytes, offset + 4);
-			bitconverter.GetBytes(msg.ofs_y, bytes, offset + 8);
-			bitconverter.GetBytes(msg.ofs_z, bytes, offset + 12);
-			bitconverter.GetBytes(msg.diag_x, bytes, offset + 16);
-			bitconverter.GetBytes(msg.diag_y, bytes, offset + 20);
-			bitconverter.GetBytes(msg.diag_z, bytes, offset + 24);
-			bitconverter.GetBytes(msg.offdiag_x, bytes, offset + 28);
-			bitconverter.GetBytes(msg.offdiag_y, bytes, offset + 32);
-			bitconverter.GetBytes(msg.offdiag_z, bytes, offset + 36);
-			bytes[offset + 40] = msg.compass_id;
-			bytes[offset + 41] = msg.cal_mask;
-			bytes[offset + 42] = msg.cal_status;
-			bytes[offset + 43] = msg.autosaved;
-			offset += 44;
-			return 192;
-		}
-
-		internal static int Serialize_EKF_STATUS_REPORT(this Msg_ekf_status_report msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.velocity_variance, bytes, offset + 0);
-			bitconverter.GetBytes(msg.pos_horiz_variance, bytes, offset + 4);
-			bitconverter.GetBytes(msg.pos_vert_variance, bytes, offset + 8);
-			bitconverter.GetBytes(msg.compass_variance, bytes, offset + 12);
-			bitconverter.GetBytes(msg.terrain_alt_variance, bytes, offset + 16);
-			bitconverter.GetBytes(msg.flags, bytes, offset + 20);
-			offset += 22;
-			return 193;
-		}
-
-		internal static int Serialize_GIMBAL_REPORT(this Msg_gimbal_report msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.delta_time, bytes, offset + 0);
-			bitconverter.GetBytes(msg.delta_angle_x, bytes, offset + 4);
-			bitconverter.GetBytes(msg.delta_angle_y, bytes, offset + 8);
-			bitconverter.GetBytes(msg.delta_angle_z, bytes, offset + 12);
-			bitconverter.GetBytes(msg.delta_velocity_x, bytes, offset + 16);
-			bitconverter.GetBytes(msg.delta_velocity_y, bytes, offset + 20);
-			bitconverter.GetBytes(msg.delta_velocity_z, bytes, offset + 24);
-			bitconverter.GetBytes(msg.joint_roll, bytes, offset + 28);
-			bitconverter.GetBytes(msg.joint_el, bytes, offset + 32);
-			bitconverter.GetBytes(msg.joint_az, bytes, offset + 36);
-			bytes[offset + 40] = msg.target_system;
-			bytes[offset + 41] = msg.target_component;
-			offset += 42;
-			return 200;
-		}
-
-		internal static int Serialize_GIMBAL_CONTROL(this Msg_gimbal_control msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.demanded_rate_x, bytes, offset + 0);
-			bitconverter.GetBytes(msg.demanded_rate_y, bytes, offset + 4);
-			bitconverter.GetBytes(msg.demanded_rate_z, bytes, offset + 8);
-			bytes[offset + 12] = msg.target_system;
-			bytes[offset + 13] = msg.target_component;
-			offset += 14;
-			return 201;
-		}
-
-		internal static int Serialize_GIMBAL_RESET(this Msg_gimbal_reset msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			offset += 2;
-			return 202;
-		}
-
-		internal static int Serialize_GIMBAL_AXIS_CALIBRATION_PROGRESS(this Msg_gimbal_axis_calibration_progress msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.calibration_axis;
-			bytes[offset + 1] = msg.calibration_progress;
-			bytes[offset + 2] = msg.calibration_status;
-			offset += 3;
-			return 203;
-		}
-
-		internal static int Serialize_GIMBAL_SET_HOME_OFFSETS(this Msg_gimbal_set_home_offsets msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			offset += 2;
-			return 204;
-		}
-
-		internal static int Serialize_GIMBAL_HOME_OFFSET_CALIBRATION_RESULT(this Msg_gimbal_home_offset_calibration_result msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.calibration_result;
-			offset += 1;
-			return 205;
-		}
-
-		internal static int Serialize_GIMBAL_SET_FACTORY_PARAMETERS(this Msg_gimbal_set_factory_parameters msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.magic_1, bytes, offset + 0);
-			bitconverter.GetBytes(msg.magic_2, bytes, offset + 4);
-			bitconverter.GetBytes(msg.magic_3, bytes, offset + 8);
-			bitconverter.GetBytes(msg.serial_number_pt_1, bytes, offset + 12);
-			bitconverter.GetBytes(msg.serial_number_pt_2, bytes, offset + 16);
-			bitconverter.GetBytes(msg.serial_number_pt_3, bytes, offset + 20);
-			bitconverter.GetBytes(msg.assembly_year, bytes, offset + 24);
-			bytes[offset + 26] = msg.target_system;
-			bytes[offset + 27] = msg.target_component;
-			bytes[offset + 28] = msg.assembly_month;
-			bytes[offset + 29] = msg.assembly_day;
-			bytes[offset + 30] = msg.assembly_hour;
-			bytes[offset + 31] = msg.assembly_minute;
-			bytes[offset + 32] = msg.assembly_second;
-			offset += 33;
-			return 206;
-		}
-
-		internal static int Serialize_GIMBAL_FACTORY_PARAMETERS_LOADED(this Msg_gimbal_factory_parameters_loaded msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.dummy;
-			offset += 1;
-			return 207;
-		}
-
-		internal static int Serialize_GIMBAL_ERASE_FIRMWARE_AND_CONFIG(this Msg_gimbal_erase_firmware_and_config msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.knock, bytes, offset + 0);
-			bytes[offset + 4] = msg.target_system;
-			bytes[offset + 5] = msg.target_component;
-			offset += 6;
-			return 208;
-		}
-
-		internal static int Serialize_GIMBAL_PERFORM_FACTORY_TESTS(this Msg_gimbal_perform_factory_tests msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			offset += 2;
-			return 209;
-		}
-
-		internal static int Serialize_GIMBAL_REPORT_FACTORY_TESTS_PROGRESS(this Msg_gimbal_report_factory_tests_progress msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.test;
-			bytes[offset + 1] = msg.test_section;
-			bytes[offset + 2] = msg.test_section_progress;
-			bytes[offset + 3] = msg.test_status;
-			offset += 4;
-			return 210;
-		}
-
-		internal static int Serialize_GOPRO_POWER_ON(this Msg_gopro_power_on msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			offset += 2;
-			return 215;
-		}
-
-		internal static int Serialize_GOPRO_POWER_OFF(this Msg_gopro_power_off msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			offset += 2;
-			return 216;
-		}
-
-		internal static int Serialize_GOPRO_COMMAND(this Msg_gopro_command msg, byte[] bytes, ref int offset)
-		{
-			bytes[offset + 0] = msg.target_system;
-			bytes[offset + 1] = msg.target_component;
-			bytes[offset + 2] = msg.gp_cmd_name_1;
-			bytes[offset + 3] = msg.gp_cmd_name_2;
-			bytes[offset + 4] = msg.gp_cmd_parm;
-			offset += 5;
-			return 217;
-		}
-
-		internal static int Serialize_GOPRO_RESPONSE(this Msg_gopro_response msg, byte[] bytes, ref int offset)
-		{
-			bitconverter.GetBytes(msg.gp_cmd_result, bytes, offset + 0);
-			bytes[offset + 2] = msg.gp_cmd_name_1;
-			bytes[offset + 3] = msg.gp_cmd_name_2;
-			bytes[offset + 4] = msg.gp_cmd_response_status;
-			bytes[offset + 5] = msg.gp_cmd_response_argument;
-			offset += 6;
-			return 218;
 		}
 
 		internal static int Serialize_HEARTBEAT(this Msg_heartbeat msg, byte[] bytes, ref int offset)
@@ -3591,6 +2631,15 @@ namespace MavLink
 			return 50;
 		}
 
+		internal static int Serialize_MISSION_REQUEST_INT(this Msg_mission_request_int msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.seq, bytes, offset + 0);
+			bytes[offset + 2] = msg.target_system;
+			bytes[offset + 3] = msg.target_component;
+			offset += 4;
+			return 51;
+		}
+
 		internal static int Serialize_SAFETY_SET_ALLOWED_AREA(this Msg_safety_set_allowed_area msg, byte[] bytes, ref int offset)
 		{
 			bitconverter.GetBytes(msg.p1x, bytes, offset + 0);
@@ -3621,13 +2670,13 @@ namespace MavLink
 
 		internal static int Serialize_ATTITUDE_QUATERNION_COV(this Msg_attitude_quaternion_cov msg, byte[] bytes, ref int offset)
 		{
-			bitconverter.GetBytes(msg.time_boot_ms, bytes, offset + 0);
-			ByteArrayUtil.ToByteArray(msg.q, bytes, offset + 4, 4);
-			bitconverter.GetBytes(msg.rollspeed, bytes, offset + 20);
-			bitconverter.GetBytes(msg.pitchspeed, bytes, offset + 24);
-			bitconverter.GetBytes(msg.yawspeed, bytes, offset + 28);
-			ByteArrayUtil.ToByteArray(msg.covariance, bytes, offset + 32, 9);
-			offset += 68;
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			ByteArrayUtil.ToByteArray(msg.q, bytes, offset + 8, 4);
+			bitconverter.GetBytes(msg.rollspeed, bytes, offset + 24);
+			bitconverter.GetBytes(msg.pitchspeed, bytes, offset + 28);
+			bitconverter.GetBytes(msg.yawspeed, bytes, offset + 32);
+			ByteArrayUtil.ToByteArray(msg.covariance, bytes, offset + 36, 9);
+			offset += 72;
 			return 61;
 		}
 
@@ -3647,37 +2696,35 @@ namespace MavLink
 
 		internal static int Serialize_GLOBAL_POSITION_INT_COV(this Msg_global_position_int_cov msg, byte[] bytes, ref int offset)
 		{
-			bitconverter.GetBytes(msg.time_utc, bytes, offset + 0);
-			bitconverter.GetBytes(msg.time_boot_ms, bytes, offset + 8);
-			bitconverter.GetBytes(msg.lat, bytes, offset + 12);
-			bitconverter.GetBytes(msg.lon, bytes, offset + 16);
-			bitconverter.GetBytes(msg.alt, bytes, offset + 20);
-			bitconverter.GetBytes(msg.relative_alt, bytes, offset + 24);
-			bitconverter.GetBytes(msg.vx, bytes, offset + 28);
-			bitconverter.GetBytes(msg.vy, bytes, offset + 32);
-			bitconverter.GetBytes(msg.vz, bytes, offset + 36);
-			ByteArrayUtil.ToByteArray(msg.covariance, bytes, offset + 40, 36);
-			bytes[offset + 184] = msg.estimator_type;
-			offset += 185;
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.lat, bytes, offset + 8);
+			bitconverter.GetBytes(msg.lon, bytes, offset + 12);
+			bitconverter.GetBytes(msg.alt, bytes, offset + 16);
+			bitconverter.GetBytes(msg.relative_alt, bytes, offset + 20);
+			bitconverter.GetBytes(msg.vx, bytes, offset + 24);
+			bitconverter.GetBytes(msg.vy, bytes, offset + 28);
+			bitconverter.GetBytes(msg.vz, bytes, offset + 32);
+			ByteArrayUtil.ToByteArray(msg.covariance, bytes, offset + 36, 36);
+			bytes[offset + 180] = msg.estimator_type;
+			offset += 181;
 			return 63;
 		}
 
 		internal static int Serialize_LOCAL_POSITION_NED_COV(this Msg_local_position_ned_cov msg, byte[] bytes, ref int offset)
 		{
-			bitconverter.GetBytes(msg.time_utc, bytes, offset + 0);
-			bitconverter.GetBytes(msg.time_boot_ms, bytes, offset + 8);
-			bitconverter.GetBytes(msg.x, bytes, offset + 12);
-			bitconverter.GetBytes(msg.y, bytes, offset + 16);
-			bitconverter.GetBytes(msg.z, bytes, offset + 20);
-			bitconverter.GetBytes(msg.vx, bytes, offset + 24);
-			bitconverter.GetBytes(msg.vy, bytes, offset + 28);
-			bitconverter.GetBytes(msg.vz, bytes, offset + 32);
-			bitconverter.GetBytes(msg.ax, bytes, offset + 36);
-			bitconverter.GetBytes(msg.ay, bytes, offset + 40);
-			bitconverter.GetBytes(msg.az, bytes, offset + 44);
-			ByteArrayUtil.ToByteArray(msg.covariance, bytes, offset + 48, 45);
-			bytes[offset + 228] = msg.estimator_type;
-			offset += 229;
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.x, bytes, offset + 8);
+			bitconverter.GetBytes(msg.y, bytes, offset + 12);
+			bitconverter.GetBytes(msg.z, bytes, offset + 16);
+			bitconverter.GetBytes(msg.vx, bytes, offset + 20);
+			bitconverter.GetBytes(msg.vy, bytes, offset + 24);
+			bitconverter.GetBytes(msg.vz, bytes, offset + 28);
+			bitconverter.GetBytes(msg.ax, bytes, offset + 32);
+			bitconverter.GetBytes(msg.ay, bytes, offset + 36);
+			bitconverter.GetBytes(msg.az, bytes, offset + 40);
+			ByteArrayUtil.ToByteArray(msg.covariance, bytes, offset + 44, 45);
+			bytes[offset + 224] = msg.estimator_type;
+			offset += 225;
 			return 64;
 		}
 
@@ -4027,6 +3074,16 @@ namespace MavLink
 			bytes[offset + 32] = msg.rssi;
 			offset += 33;
 			return 92;
+		}
+
+		internal static int Serialize_HIL_ACTUATOR_CONTROLS(this Msg_hil_actuator_controls msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.flags, bytes, offset + 8);
+			ByteArrayUtil.ToByteArray(msg.controls, bytes, offset + 16, 16);
+			bytes[offset + 80] = msg.mode;
+			offset += 81;
+			return 93;
 		}
 
 		internal static int Serialize_OPTICAL_FLOW(this Msg_optical_flow msg, byte[] bytes, ref int offset)
@@ -4572,6 +3629,80 @@ namespace MavLink
 			return 140;
 		}
 
+		internal static int Serialize_ALTITUDE(this Msg_altitude msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.altitude_monotonic, bytes, offset + 8);
+			bitconverter.GetBytes(msg.altitude_amsl, bytes, offset + 12);
+			bitconverter.GetBytes(msg.altitude_local, bytes, offset + 16);
+			bitconverter.GetBytes(msg.altitude_relative, bytes, offset + 20);
+			bitconverter.GetBytes(msg.altitude_terrain, bytes, offset + 24);
+			bitconverter.GetBytes(msg.bottom_clearance, bytes, offset + 28);
+			offset += 32;
+			return 141;
+		}
+
+		internal static int Serialize_RESOURCE_REQUEST(this Msg_resource_request msg, byte[] bytes, ref int offset)
+		{
+			bytes[offset + 0] = msg.request_id;
+			bytes[offset + 1] = msg.uri_type;
+			ByteArrayUtil.ToByteArray(msg.uri, bytes, offset + 2, 120);
+			bytes[offset + 122] = msg.transfer_type;
+			ByteArrayUtil.ToByteArray(msg.storage, bytes, offset + 123, 120);
+			offset += 243;
+			return 142;
+		}
+
+		internal static int Serialize_SCALED_PRESSURE3(this Msg_scaled_pressure3 msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_boot_ms, bytes, offset + 0);
+			bitconverter.GetBytes(msg.press_abs, bytes, offset + 4);
+			bitconverter.GetBytes(msg.press_diff, bytes, offset + 8);
+			bitconverter.GetBytes(msg.temperature, bytes, offset + 12);
+			offset += 14;
+			return 143;
+		}
+
+		internal static int Serialize_FOLLOW_TARGET(this Msg_follow_target msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.timestamp, bytes, offset + 0);
+			bitconverter.GetBytes(msg.custom_state, bytes, offset + 8);
+			bitconverter.GetBytes(msg.lat, bytes, offset + 16);
+			bitconverter.GetBytes(msg.lon, bytes, offset + 20);
+			bitconverter.GetBytes(msg.alt, bytes, offset + 24);
+			ByteArrayUtil.ToByteArray(msg.vel, bytes, offset + 28, 3);
+			ByteArrayUtil.ToByteArray(msg.acc, bytes, offset + 40, 3);
+			ByteArrayUtil.ToByteArray(msg.attitude_q, bytes, offset + 52, 4);
+			ByteArrayUtil.ToByteArray(msg.rates, bytes, offset + 68, 3);
+			ByteArrayUtil.ToByteArray(msg.position_cov, bytes, offset + 80, 3);
+			bytes[offset + 92] = msg.est_capabilities;
+			offset += 93;
+			return 144;
+		}
+
+		internal static int Serialize_CONTROL_SYSTEM_STATE(this Msg_control_system_state msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.x_acc, bytes, offset + 8);
+			bitconverter.GetBytes(msg.y_acc, bytes, offset + 12);
+			bitconverter.GetBytes(msg.z_acc, bytes, offset + 16);
+			bitconverter.GetBytes(msg.x_vel, bytes, offset + 20);
+			bitconverter.GetBytes(msg.y_vel, bytes, offset + 24);
+			bitconverter.GetBytes(msg.z_vel, bytes, offset + 28);
+			bitconverter.GetBytes(msg.x_pos, bytes, offset + 32);
+			bitconverter.GetBytes(msg.y_pos, bytes, offset + 36);
+			bitconverter.GetBytes(msg.z_pos, bytes, offset + 40);
+			bitconverter.GetBytes(msg.airspeed, bytes, offset + 44);
+			ByteArrayUtil.ToByteArray(msg.vel_variance, bytes, offset + 48, 3);
+			ByteArrayUtil.ToByteArray(msg.pos_variance, bytes, offset + 60, 3);
+			ByteArrayUtil.ToByteArray(msg.q, bytes, offset + 72, 4);
+			bitconverter.GetBytes(msg.roll_rate, bytes, offset + 88);
+			bitconverter.GetBytes(msg.pitch_rate, bytes, offset + 92);
+			bitconverter.GetBytes(msg.yaw_rate, bytes, offset + 96);
+			offset += 100;
+			return 146;
+		}
+
 		internal static int Serialize_BATTERY_STATUS(this Msg_battery_status msg, byte[] bytes, ref int offset)
 		{
 			bitconverter.GetBytes(msg.current_consumed, bytes, offset + 0);
@@ -4602,6 +3733,241 @@ namespace MavLink
 			ByteArrayUtil.ToByteArray(msg.os_custom_version, bytes, offset + 52, 8);
 			offset += 60;
 			return 148;
+		}
+
+		internal static int Serialize_LANDING_TARGET(this Msg_landing_target msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.angle_x, bytes, offset + 8);
+			bitconverter.GetBytes(msg.angle_y, bytes, offset + 12);
+			bitconverter.GetBytes(msg.distance, bytes, offset + 16);
+			bitconverter.GetBytes(msg.size_x, bytes, offset + 20);
+			bitconverter.GetBytes(msg.size_y, bytes, offset + 24);
+			bytes[offset + 28] = msg.target_num;
+			bytes[offset + 29] = msg.frame;
+			offset += 30;
+			return 149;
+		}
+
+		internal static int Serialize_ESTIMATOR_STATUS(this Msg_estimator_status msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.vel_ratio, bytes, offset + 8);
+			bitconverter.GetBytes(msg.pos_horiz_ratio, bytes, offset + 12);
+			bitconverter.GetBytes(msg.pos_vert_ratio, bytes, offset + 16);
+			bitconverter.GetBytes(msg.mag_ratio, bytes, offset + 20);
+			bitconverter.GetBytes(msg.hagl_ratio, bytes, offset + 24);
+			bitconverter.GetBytes(msg.tas_ratio, bytes, offset + 28);
+			bitconverter.GetBytes(msg.pos_horiz_accuracy, bytes, offset + 32);
+			bitconverter.GetBytes(msg.pos_vert_accuracy, bytes, offset + 36);
+			bitconverter.GetBytes(msg.flags, bytes, offset + 40);
+			offset += 42;
+			return 230;
+		}
+
+		internal static int Serialize_WIND_COV(this Msg_wind_cov msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.wind_x, bytes, offset + 8);
+			bitconverter.GetBytes(msg.wind_y, bytes, offset + 12);
+			bitconverter.GetBytes(msg.wind_z, bytes, offset + 16);
+			bitconverter.GetBytes(msg.var_horiz, bytes, offset + 20);
+			bitconverter.GetBytes(msg.var_vert, bytes, offset + 24);
+			bitconverter.GetBytes(msg.wind_alt, bytes, offset + 28);
+			bitconverter.GetBytes(msg.horiz_accuracy, bytes, offset + 32);
+			bitconverter.GetBytes(msg.vert_accuracy, bytes, offset + 36);
+			offset += 40;
+			return 231;
+		}
+
+		internal static int Serialize_GPS_INPUT(this Msg_gps_input msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.time_week_ms, bytes, offset + 8);
+			bitconverter.GetBytes(msg.lat, bytes, offset + 12);
+			bitconverter.GetBytes(msg.lon, bytes, offset + 16);
+			bitconverter.GetBytes(msg.alt, bytes, offset + 20);
+			bitconverter.GetBytes(msg.hdop, bytes, offset + 24);
+			bitconverter.GetBytes(msg.vdop, bytes, offset + 28);
+			bitconverter.GetBytes(msg.vn, bytes, offset + 32);
+			bitconverter.GetBytes(msg.ve, bytes, offset + 36);
+			bitconverter.GetBytes(msg.vd, bytes, offset + 40);
+			bitconverter.GetBytes(msg.speed_accuracy, bytes, offset + 44);
+			bitconverter.GetBytes(msg.horiz_accuracy, bytes, offset + 48);
+			bitconverter.GetBytes(msg.vert_accuracy, bytes, offset + 52);
+			bitconverter.GetBytes(msg.ignore_flags, bytes, offset + 56);
+			bitconverter.GetBytes(msg.time_week, bytes, offset + 58);
+			bytes[offset + 60] = msg.gps_id;
+			bytes[offset + 61] = msg.fix_type;
+			bytes[offset + 62] = msg.satellites_visible;
+			offset += 63;
+			return 232;
+		}
+
+		internal static int Serialize_GPS_RTCM_DATA(this Msg_gps_rtcm_data msg, byte[] bytes, ref int offset)
+		{
+			bytes[offset + 0] = msg.flags;
+			bytes[offset + 1] = msg.len;
+			ByteArrayUtil.ToByteArray(msg.data, bytes, offset + 2, 180);
+			offset += 182;
+			return 233;
+		}
+
+		internal static int Serialize_HIGH_LATENCY(this Msg_high_latency msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.custom_mode, bytes, offset + 0);
+			bitconverter.GetBytes(msg.latitude, bytes, offset + 4);
+			bitconverter.GetBytes(msg.longitude, bytes, offset + 8);
+			bitconverter.GetBytes(msg.roll, bytes, offset + 12);
+			bitconverter.GetBytes(msg.pitch, bytes, offset + 14);
+			bitconverter.GetBytes(msg.heading, bytes, offset + 16);
+			bitconverter.GetBytes(msg.heading_sp, bytes, offset + 18);
+			bitconverter.GetBytes(msg.altitude_amsl, bytes, offset + 20);
+			bitconverter.GetBytes(msg.altitude_sp, bytes, offset + 22);
+			bitconverter.GetBytes(msg.wp_distance, bytes, offset + 24);
+			bytes[offset + 26] = msg.base_mode;
+			bytes[offset + 27] = msg.landed_state;
+			bytes[offset + 28] = unchecked((byte)msg.throttle);
+			bytes[offset + 29] = msg.airspeed;
+			bytes[offset + 30] = msg.airspeed_sp;
+			bytes[offset + 31] = msg.groundspeed;
+			bytes[offset + 32] = unchecked((byte)msg.climb_rate);
+			bytes[offset + 33] = msg.gps_nsat;
+			bytes[offset + 34] = msg.gps_fix_type;
+			bytes[offset + 35] = msg.battery_remaining;
+			bytes[offset + 36] = unchecked((byte)msg.temperature);
+			bytes[offset + 37] = unchecked((byte)msg.temperature_air);
+			bytes[offset + 38] = msg.failsafe;
+			bytes[offset + 39] = msg.wp_num;
+			offset += 40;
+			return 234;
+		}
+
+		internal static int Serialize_HIGH_LATENCY2(this Msg_high_latency2 msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.timestamp, bytes, offset + 0);
+			bitconverter.GetBytes(msg.latitude, bytes, offset + 4);
+			bitconverter.GetBytes(msg.longitude, bytes, offset + 8);
+			bitconverter.GetBytes(msg.custom_mode, bytes, offset + 12);
+			bitconverter.GetBytes(msg.altitude, bytes, offset + 14);
+			bitconverter.GetBytes(msg.target_altitude, bytes, offset + 16);
+			bitconverter.GetBytes(msg.target_distance, bytes, offset + 18);
+			bitconverter.GetBytes(msg.wp_num, bytes, offset + 20);
+			bitconverter.GetBytes(msg.failure_flags, bytes, offset + 22);
+			bytes[offset + 24] = msg.type;
+			bytes[offset + 25] = msg.autopilot;
+			bytes[offset + 26] = msg.heading;
+			bytes[offset + 27] = msg.target_heading;
+			bytes[offset + 28] = msg.throttle;
+			bytes[offset + 29] = msg.airspeed;
+			bytes[offset + 30] = msg.airspeed_sp;
+			bytes[offset + 31] = msg.groundspeed;
+			bytes[offset + 32] = msg.windspeed;
+			bytes[offset + 33] = msg.wind_heading;
+			bytes[offset + 34] = msg.eph;
+			bytes[offset + 35] = msg.epv;
+			bytes[offset + 36] = unchecked((byte)msg.temperature_air);
+			bytes[offset + 37] = unchecked((byte)msg.climb_rate);
+			bytes[offset + 38] = unchecked((byte)msg.battery);
+			bytes[offset + 39] = unchecked((byte)msg.custom0);
+			bytes[offset + 40] = unchecked((byte)msg.custom1);
+			bytes[offset + 41] = unchecked((byte)msg.custom2);
+			offset += 42;
+			return 235;
+		}
+
+		internal static int Serialize_VIBRATION(this Msg_vibration msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.time_usec, bytes, offset + 0);
+			bitconverter.GetBytes(msg.vibration_x, bytes, offset + 8);
+			bitconverter.GetBytes(msg.vibration_y, bytes, offset + 12);
+			bitconverter.GetBytes(msg.vibration_z, bytes, offset + 16);
+			bitconverter.GetBytes(msg.clipping_0, bytes, offset + 20);
+			bitconverter.GetBytes(msg.clipping_1, bytes, offset + 24);
+			bitconverter.GetBytes(msg.clipping_2, bytes, offset + 28);
+			offset += 32;
+			return 241;
+		}
+
+		internal static int Serialize_HOME_POSITION(this Msg_home_position msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.latitude, bytes, offset + 0);
+			bitconverter.GetBytes(msg.longitude, bytes, offset + 4);
+			bitconverter.GetBytes(msg.altitude, bytes, offset + 8);
+			bitconverter.GetBytes(msg.x, bytes, offset + 12);
+			bitconverter.GetBytes(msg.y, bytes, offset + 16);
+			bitconverter.GetBytes(msg.z, bytes, offset + 20);
+			ByteArrayUtil.ToByteArray(msg.q, bytes, offset + 24, 4);
+			bitconverter.GetBytes(msg.approach_x, bytes, offset + 40);
+			bitconverter.GetBytes(msg.approach_y, bytes, offset + 44);
+			bitconverter.GetBytes(msg.approach_z, bytes, offset + 48);
+			offset += 52;
+			return 242;
+		}
+
+		internal static int Serialize_SET_HOME_POSITION(this Msg_set_home_position msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.latitude, bytes, offset + 0);
+			bitconverter.GetBytes(msg.longitude, bytes, offset + 4);
+			bitconverter.GetBytes(msg.altitude, bytes, offset + 8);
+			bitconverter.GetBytes(msg.x, bytes, offset + 12);
+			bitconverter.GetBytes(msg.y, bytes, offset + 16);
+			bitconverter.GetBytes(msg.z, bytes, offset + 20);
+			ByteArrayUtil.ToByteArray(msg.q, bytes, offset + 24, 4);
+			bitconverter.GetBytes(msg.approach_x, bytes, offset + 40);
+			bitconverter.GetBytes(msg.approach_y, bytes, offset + 44);
+			bitconverter.GetBytes(msg.approach_z, bytes, offset + 48);
+			bytes[offset + 52] = msg.target_system;
+			offset += 53;
+			return 243;
+		}
+
+		internal static int Serialize_MESSAGE_INTERVAL(this Msg_message_interval msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.interval_us, bytes, offset + 0);
+			bitconverter.GetBytes(msg.message_id, bytes, offset + 4);
+			offset += 6;
+			return 244;
+		}
+
+		internal static int Serialize_EXTENDED_SYS_STATE(this Msg_extended_sys_state msg, byte[] bytes, ref int offset)
+		{
+			bytes[offset + 0] = msg.vtol_state;
+			bytes[offset + 1] = msg.landed_state;
+			offset += 2;
+			return 245;
+		}
+
+		internal static int Serialize_ADSB_VEHICLE(this Msg_adsb_vehicle msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.ICAO_address, bytes, offset + 0);
+			bitconverter.GetBytes(msg.lat, bytes, offset + 4);
+			bitconverter.GetBytes(msg.lon, bytes, offset + 8);
+			bitconverter.GetBytes(msg.altitude, bytes, offset + 12);
+			bitconverter.GetBytes(msg.heading, bytes, offset + 16);
+			bitconverter.GetBytes(msg.hor_velocity, bytes, offset + 18);
+			bitconverter.GetBytes(msg.ver_velocity, bytes, offset + 20);
+			bitconverter.GetBytes(msg.flags, bytes, offset + 22);
+			bitconverter.GetBytes(msg.squawk, bytes, offset + 24);
+			bytes[offset + 26] = msg.altitude_type;
+			ByteArrayUtil.ToByteArray(msg.callsign, bytes, offset + 27, 9);
+			bytes[offset + 36] = msg.emitter_type;
+			bytes[offset + 37] = msg.tslc;
+			offset += 38;
+			return 246;
+		}
+
+		internal static int Serialize_COLLISION(this Msg_collision msg, byte[] bytes, ref int offset)
+		{
+			bitconverter.GetBytes(msg.id, bytes, offset + 0);
+			bitconverter.GetBytes(msg.time_to_minimum_delta, bytes, offset + 4);
+			bitconverter.GetBytes(msg.altitude_minimum_delta, bytes, offset + 8);
+			bitconverter.GetBytes(msg.horizontal_minimum_delta, bytes, offset + 12);
+			bytes[offset + 16] = msg.src;
+			bytes[offset + 17] = msg.action;
+			bytes[offset + 18] = msg.threat_level;
+			offset += 19;
+			return 247;
 		}
 
 		internal static int Serialize_V2_EXTENSION(this Msg_v2_extension msg, byte[] bytes, ref int offset)

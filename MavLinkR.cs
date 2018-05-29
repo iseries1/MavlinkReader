@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 using MavLink;
 
 namespace MavLinkReader
@@ -30,15 +23,17 @@ namespace MavLinkReader
         Msg_scaled_pressure Sp = new Msg_scaled_pressure();
         Msg_command_ack Ca = new Msg_command_ack();
         Msg_statustext St = new Msg_statustext();
-        int Total = 0;
+        Msg_mission_count Mc = new Msg_mission_count();
+        Msg_mission_item[] Mi = new Msg_mission_item[32];
         int Prs;
         int Tep;
         int Dif;
         int Systemid;
         int Componentid;
         int Sequence;
-        StreamWriter Sw = null;
         Boolean HB = true;
+        volatile int MI = -1;
+        Util ut;
 
         public MavLinkReader()
         {
@@ -50,6 +45,8 @@ namespace MavLinkReader
             if (P.Length > 0)
                 Comm.Text = P[0];
             FlightModes.Items.AddRange(SMode);
+            Mi[0] = new Msg_mission_item();
+            ut = new Util();
         }
 
         void Mv_PacketReceived(object sender, MavLink.MavlinkPacket e)
@@ -86,13 +83,7 @@ namespace MavLinkReader
                  * Special log of Barometric data to the D drive
                  * Can be disable if not needed
                  */
-                if (Sw == null)
-                {
-                    Sw = new StreamWriter("d:\\Baro.csv");
-                    Sw.Write("\"Item\", \"Pressure\", \"Temp\", \"Difference\"\r\n");
-                }
-                String S = String.Format("{0}, {1}, {2}, {3}\r\n", Total++, Prs, Tep, Dif);
-                Sw.Write(S);
+                ut.LogPressure(Sp);
             }
             if (m.GetType() == Ca.GetType())
             {
@@ -101,6 +92,18 @@ namespace MavLinkReader
             if (m.GetType() == St.GetType())
             {
                 St = (Msg_statustext)e.Message;
+            }
+            if (m.GetType() == Mc.GetType())
+            {
+                Mc = (Msg_mission_count)e.Message;
+                MI = 0;
+                GetMissionValues.RunWorkerAsync();
+            }
+            if (m.GetType() == Mi[0].GetType())
+            {
+                Mi[MI++] = (Msg_mission_item)e.Message;
+                if (MI >= Mc.count)
+                    MI = -1;
             }
             if (x > 0)
             {
@@ -185,6 +188,10 @@ namespace MavLinkReader
                     c[i] = (char)St.text[i];
                 Message.Text = new string(c);
             }
+            if (Mc != null)
+            {
+                MissionItems.Text = String.Format("{0:d}", Mc.count);
+            }
         }
 
         /*
@@ -258,6 +265,48 @@ namespace MavLinkReader
             m.target_system = (byte)MAV_AUTOPILOT.MAV_AUTOPILOT_RESERVED;
 
             SendPacket(m);
+        }
+
+        private void SendMission(object sender, EventArgs e)
+        {
+            Msg_mission_clear_all cl = new Msg_mission_clear_all();
+            cl.target_component = (byte)MAV_COMPONENT.MAV_COMP_ID_ALL;
+            cl.target_system = (byte)Systemid;
+            SendPacket(cl);
+            Msg_mission_item it = new Msg_mission_item();
+            it.autocontinue = 1;
+            it.command = (byte)MAV_CMD.MAV_CMD_NAV_TAKEOFF;
+            it.current = 0;
+            it.frame = (byte)MAV_FRAME.MAV_FRAME_GLOBAL_RELATIVE_ALT;
+            it.seq = 1;
+            SendPacket(it);
+        }
+
+        private void GetMission(object sender, EventArgs e)
+        {
+            Msg_mission_request_list rl = new Msg_mission_request_list();
+            rl.target_component = (byte)MAV_COMPONENT.MAV_COMP_ID_ALL;
+            rl.target_system = (byte)Systemid;
+            SendPacket(rl);
+        }
+
+        /* Lacks retry logic in case mission recieved is missed */
+        private void RecvMission(object sender, DoWorkEventArgs e)
+        {
+            int Pr = -1;
+
+            while (MI >= 0)
+            {
+                if ((Pr != MI) && (MI >= 0))
+                {
+                    Msg_mission_request Mr = new Msg_mission_request();
+                    Mr.seq = (byte)MI;
+                    Mr.target_component = (byte)MAV_COMPONENT.MAV_COMP_ID_ALL;
+                    Mr.target_system = (byte)Systemid;
+                    SendPacket(Mr);
+                    Pr = MI;
+                }
+            }
         }
     }
 

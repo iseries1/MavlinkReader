@@ -74,6 +74,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.FlightModes = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.MissionItems = new System.Windows.Forms.Label();
+            this.GetMissionValues = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // LCom
@@ -137,7 +142,7 @@
             // 
             this.LStatus.AutoSize = true;
             this.LStatus.ForeColor = System.Drawing.Color.Lime;
-            this.LStatus.Location = new System.Drawing.Point(12, 202);
+            this.LStatus.Location = new System.Drawing.Point(18, 233);
             this.LStatus.Name = "LStatus";
             this.LStatus.Size = new System.Drawing.Size(50, 16);
             this.LStatus.TabIndex = 0;
@@ -146,7 +151,7 @@
             // Status
             // 
             this.Status.AutoSize = true;
-            this.Status.Location = new System.Drawing.Point(80, 202);
+            this.Status.Location = new System.Drawing.Point(86, 233);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(30, 16);
             this.Status.TabIndex = 4;
@@ -156,7 +161,7 @@
             // 
             this.LMode.AutoSize = true;
             this.LMode.ForeColor = System.Drawing.Color.Lime;
-            this.LMode.Location = new System.Drawing.Point(157, 202);
+            this.LMode.Location = new System.Drawing.Point(163, 233);
             this.LMode.Name = "LMode";
             this.LMode.Size = new System.Drawing.Size(44, 16);
             this.LMode.TabIndex = 0;
@@ -165,7 +170,7 @@
             // Mode
             // 
             this.Mode.AutoSize = true;
-            this.Mode.Location = new System.Drawing.Point(220, 202);
+            this.Mode.Location = new System.Drawing.Point(226, 233);
             this.Mode.Name = "Mode";
             this.Mode.Size = new System.Drawing.Size(30, 16);
             this.Mode.TabIndex = 4;
@@ -175,7 +180,7 @@
             // 
             this.LBattery.AutoSize = true;
             this.LBattery.ForeColor = System.Drawing.Color.Lime;
-            this.LBattery.Location = new System.Drawing.Point(12, 218);
+            this.LBattery.Location = new System.Drawing.Point(18, 249);
             this.LBattery.Name = "LBattery";
             this.LBattery.Size = new System.Drawing.Size(54, 16);
             this.LBattery.TabIndex = 0;
@@ -184,7 +189,7 @@
             // BVolts
             // 
             this.BVolts.AutoSize = true;
-            this.BVolts.Location = new System.Drawing.Point(80, 218);
+            this.BVolts.Location = new System.Drawing.Point(86, 249);
             this.BVolts.Name = "BVolts";
             this.BVolts.Size = new System.Drawing.Size(30, 16);
             this.BVolts.TabIndex = 4;
@@ -194,7 +199,7 @@
             // 
             this.LBPercent.AutoSize = true;
             this.LBPercent.ForeColor = System.Drawing.Color.Lime;
-            this.LBPercent.Location = new System.Drawing.Point(157, 218);
+            this.LBPercent.Location = new System.Drawing.Point(163, 249);
             this.LBPercent.Name = "LBPercent";
             this.LBPercent.Size = new System.Drawing.Size(57, 16);
             this.LBPercent.TabIndex = 0;
@@ -203,7 +208,7 @@
             // BPercent
             // 
             this.BPercent.AutoSize = true;
-            this.BPercent.Location = new System.Drawing.Point(220, 218);
+            this.BPercent.Location = new System.Drawing.Point(226, 249);
             this.BPercent.Name = "BPercent";
             this.BPercent.Size = new System.Drawing.Size(30, 16);
             this.BPercent.TabIndex = 4;
@@ -213,7 +218,7 @@
             // 
             this.LCurrent.AutoSize = true;
             this.LCurrent.ForeColor = System.Drawing.Color.Lime;
-            this.LCurrent.Location = new System.Drawing.Point(299, 218);
+            this.LCurrent.Location = new System.Drawing.Point(305, 249);
             this.LCurrent.Name = "LCurrent";
             this.LCurrent.Size = new System.Drawing.Size(54, 16);
             this.LCurrent.TabIndex = 0;
@@ -222,7 +227,7 @@
             // Current
             // 
             this.Current.AutoSize = true;
-            this.Current.Location = new System.Drawing.Point(373, 218);
+            this.Current.Location = new System.Drawing.Point(379, 249);
             this.Current.Name = "Current";
             this.Current.Size = new System.Drawing.Size(30, 16);
             this.Current.TabIndex = 4;
@@ -232,7 +237,7 @@
             // 
             this.LRoll.AutoSize = true;
             this.LRoll.ForeColor = System.Drawing.Color.Lime;
-            this.LRoll.Location = new System.Drawing.Point(12, 234);
+            this.LRoll.Location = new System.Drawing.Point(18, 265);
             this.LRoll.Name = "LRoll";
             this.LRoll.Size = new System.Drawing.Size(34, 16);
             this.LRoll.TabIndex = 0;
@@ -241,7 +246,7 @@
             // Roll
             // 
             this.Roll.AutoSize = true;
-            this.Roll.Location = new System.Drawing.Point(80, 234);
+            this.Roll.Location = new System.Drawing.Point(86, 265);
             this.Roll.Name = "Roll";
             this.Roll.Size = new System.Drawing.Size(30, 16);
             this.Roll.TabIndex = 4;
@@ -251,7 +256,7 @@
             // 
             this.LPitch.AutoSize = true;
             this.LPitch.ForeColor = System.Drawing.Color.Lime;
-            this.LPitch.Location = new System.Drawing.Point(157, 234);
+            this.LPitch.Location = new System.Drawing.Point(163, 265);
             this.LPitch.Name = "LPitch";
             this.LPitch.Size = new System.Drawing.Size(42, 16);
             this.LPitch.TabIndex = 0;
@@ -260,7 +265,7 @@
             // Pitch
             // 
             this.Pitch.AutoSize = true;
-            this.Pitch.Location = new System.Drawing.Point(220, 234);
+            this.Pitch.Location = new System.Drawing.Point(226, 265);
             this.Pitch.Name = "Pitch";
             this.Pitch.Size = new System.Drawing.Size(30, 16);
             this.Pitch.TabIndex = 4;
@@ -270,7 +275,7 @@
             // 
             this.LYaw.AutoSize = true;
             this.LYaw.ForeColor = System.Drawing.Color.Lime;
-            this.LYaw.Location = new System.Drawing.Point(299, 234);
+            this.LYaw.Location = new System.Drawing.Point(305, 265);
             this.LYaw.Name = "LYaw";
             this.LYaw.Size = new System.Drawing.Size(36, 16);
             this.LYaw.TabIndex = 0;
@@ -279,7 +284,7 @@
             // Yaw
             // 
             this.Yaw.AutoSize = true;
-            this.Yaw.Location = new System.Drawing.Point(373, 234);
+            this.Yaw.Location = new System.Drawing.Point(379, 265);
             this.Yaw.Name = "Yaw";
             this.Yaw.Size = new System.Drawing.Size(30, 16);
             this.Yaw.TabIndex = 4;
@@ -289,7 +294,7 @@
             // 
             this.LGpsf.AutoSize = true;
             this.LGpsf.ForeColor = System.Drawing.Color.Lime;
-            this.LGpsf.Location = new System.Drawing.Point(12, 250);
+            this.LGpsf.Location = new System.Drawing.Point(18, 281);
             this.LGpsf.Name = "LGpsf";
             this.LGpsf.Size = new System.Drawing.Size(62, 16);
             this.LGpsf.TabIndex = 0;
@@ -298,7 +303,7 @@
             // GpsFix
             // 
             this.GpsFix.AutoSize = true;
-            this.GpsFix.Location = new System.Drawing.Point(80, 250);
+            this.GpsFix.Location = new System.Drawing.Point(86, 281);
             this.GpsFix.Name = "GpsFix";
             this.GpsFix.Size = new System.Drawing.Size(30, 16);
             this.GpsFix.TabIndex = 4;
@@ -308,7 +313,7 @@
             // 
             this.LLatitude.AutoSize = true;
             this.LLatitude.ForeColor = System.Drawing.Color.Lime;
-            this.LLatitude.Location = new System.Drawing.Point(157, 250);
+            this.LLatitude.Location = new System.Drawing.Point(163, 281);
             this.LLatitude.Name = "LLatitude";
             this.LLatitude.Size = new System.Drawing.Size(58, 16);
             this.LLatitude.TabIndex = 0;
@@ -317,7 +322,7 @@
             // Latitude
             // 
             this.Latitude.AutoSize = true;
-            this.Latitude.Location = new System.Drawing.Point(221, 250);
+            this.Latitude.Location = new System.Drawing.Point(227, 281);
             this.Latitude.Name = "Latitude";
             this.Latitude.Size = new System.Drawing.Size(30, 16);
             this.Latitude.TabIndex = 4;
@@ -327,7 +332,7 @@
             // 
             this.LLongitude.AutoSize = true;
             this.LLongitude.ForeColor = System.Drawing.Color.Lime;
-            this.LLongitude.Location = new System.Drawing.Point(299, 250);
+            this.LLongitude.Location = new System.Drawing.Point(305, 281);
             this.LLongitude.Name = "LLongitude";
             this.LLongitude.Size = new System.Drawing.Size(68, 16);
             this.LLongitude.TabIndex = 0;
@@ -336,7 +341,7 @@
             // Longitude
             // 
             this.Longitude.AutoSize = true;
-            this.Longitude.Location = new System.Drawing.Point(373, 250);
+            this.Longitude.Location = new System.Drawing.Point(379, 281);
             this.Longitude.Name = "Longitude";
             this.Longitude.Size = new System.Drawing.Size(30, 16);
             this.Longitude.TabIndex = 4;
@@ -346,7 +351,7 @@
             // 
             this.LSatellites.AutoSize = true;
             this.LSatellites.ForeColor = System.Drawing.Color.Lime;
-            this.LSatellites.Location = new System.Drawing.Point(12, 266);
+            this.LSatellites.Location = new System.Drawing.Point(18, 297);
             this.LSatellites.Name = "LSatellites";
             this.LSatellites.Size = new System.Drawing.Size(66, 16);
             this.LSatellites.TabIndex = 0;
@@ -355,7 +360,7 @@
             // Satellites
             // 
             this.Satellites.AutoSize = true;
-            this.Satellites.Location = new System.Drawing.Point(80, 266);
+            this.Satellites.Location = new System.Drawing.Point(86, 297);
             this.Satellites.Name = "Satellites";
             this.Satellites.Size = new System.Drawing.Size(30, 16);
             this.Satellites.TabIndex = 4;
@@ -365,7 +370,7 @@
             // 
             this.LAltitude.AutoSize = true;
             this.LAltitude.ForeColor = System.Drawing.Color.Lime;
-            this.LAltitude.Location = new System.Drawing.Point(12, 282);
+            this.LAltitude.Location = new System.Drawing.Point(18, 313);
             this.LAltitude.Name = "LAltitude";
             this.LAltitude.Size = new System.Drawing.Size(56, 16);
             this.LAltitude.TabIndex = 0;
@@ -374,7 +379,7 @@
             // Altitude
             // 
             this.Altitude.AutoSize = true;
-            this.Altitude.Location = new System.Drawing.Point(80, 282);
+            this.Altitude.Location = new System.Drawing.Point(86, 313);
             this.Altitude.Name = "Altitude";
             this.Altitude.Size = new System.Drawing.Size(30, 16);
             this.Altitude.TabIndex = 4;
@@ -384,7 +389,7 @@
             // 
             this.LHeading.AutoSize = true;
             this.LHeading.ForeColor = System.Drawing.Color.Lime;
-            this.LHeading.Location = new System.Drawing.Point(157, 282);
+            this.LHeading.Location = new System.Drawing.Point(163, 313);
             this.LHeading.Name = "LHeading";
             this.LHeading.Size = new System.Drawing.Size(59, 16);
             this.LHeading.TabIndex = 0;
@@ -393,7 +398,7 @@
             // Heading
             // 
             this.Heading.AutoSize = true;
-            this.Heading.Location = new System.Drawing.Point(220, 282);
+            this.Heading.Location = new System.Drawing.Point(226, 313);
             this.Heading.Name = "Heading";
             this.Heading.Size = new System.Drawing.Size(30, 16);
             this.Heading.TabIndex = 4;
@@ -403,7 +408,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(299, 202);
+            this.label1.Location = new System.Drawing.Point(305, 233);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 5;
@@ -412,7 +417,7 @@
             // Seq
             // 
             this.Seq.AutoSize = true;
-            this.Seq.Location = new System.Drawing.Point(373, 202);
+            this.Seq.Location = new System.Drawing.Point(379, 233);
             this.Seq.Name = "Seq";
             this.Seq.Size = new System.Drawing.Size(30, 16);
             this.Seq.TabIndex = 6;
@@ -422,7 +427,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(12, 321);
+            this.label2.Location = new System.Drawing.Point(18, 352);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 16);
             this.label2.TabIndex = 7;
@@ -431,7 +436,7 @@
             // Results
             // 
             this.Results.AutoSize = true;
-            this.Results.Location = new System.Drawing.Point(157, 321);
+            this.Results.Location = new System.Drawing.Point(163, 352);
             this.Results.Name = "Results";
             this.Results.Size = new System.Drawing.Size(30, 16);
             this.Results.TabIndex = 8;
@@ -441,7 +446,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(12, 337);
+            this.label3.Location = new System.Drawing.Point(18, 368);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 16);
             this.label3.TabIndex = 9;
@@ -450,7 +455,7 @@
             // Message
             // 
             this.Message.AutoSize = true;
-            this.Message.Location = new System.Drawing.Point(157, 337);
+            this.Message.Location = new System.Drawing.Point(163, 368);
             this.Message.Name = "Message";
             this.Message.Size = new System.Drawing.Size(30, 16);
             this.Message.TabIndex = 10;
@@ -472,7 +477,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(302, 279);
+            this.button1.Location = new System.Drawing.Point(308, 310);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 23);
             this.button1.TabIndex = 12;
@@ -499,11 +504,58 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Flight Mode:";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(343, 163);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Send Mission";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.SendMission);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(343, 192);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(118, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Get Mission";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.GetMission);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Lime;
+            this.label5.Location = new System.Drawing.Point(18, 329);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 16);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Mission:";
+            // 
+            // MissionItems
+            // 
+            this.MissionItems.AutoSize = true;
+            this.MissionItems.Location = new System.Drawing.Point(86, 329);
+            this.MissionItems.Name = "MissionItems";
+            this.MissionItems.Size = new System.Drawing.Size(30, 16);
+            this.MissionItems.TabIndex = 18;
+            this.MissionItems.Text = "N/A";
+            // 
+            // GetMissionValues
+            // 
+            this.GetMissionValues.DoWork += new System.ComponentModel.DoWorkEventHandler(this.RecvMission);
+            // 
             // MavLinkReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 436);
+            this.Controls.Add(this.MissionItems);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.FlightModes);
             this.Controls.Add(this.button1);
@@ -605,6 +657,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox FlightModes;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label MissionItems;
+        private System.ComponentModel.BackgroundWorker GetMissionValues;
     }
 }
 
